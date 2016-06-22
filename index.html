@@ -5,62 +5,173 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>ZULUZULUU</title>
-	<link rel="stylesheet" href="main.css" type="text/css">
-	<link rel="stylesheet" href="menubar.css" type="text/css">
+	<!-- <link rel="stylesheet" href="main.css" type="text/css"> -->
+	<!-- <link rel="stylesheet" href="menubar.css" type="text/css"> -->
+	<link rel="stylesheet" href="global_bundle.css" type="text/css">
+	<link rel="stylesheet" href="tralbum_bundle.css" type="text/css">
+	<!-- <link rel="stylesheet" href="global_phone_bundle.css" type="text/css"> -->
+	<!-- <link rel="stylesheet" href="tralbum_mobile_bundle.css" type="text/css"> -->
+	<link rel="stylesheet" href="customstyle.css" type="text/css">
 	<link rel="stylesheet" href="stylesheet.css" type="text/css">
 </head>
-<body>
+<body class="webkit mac defaultbg has-menubar">
 	<div id="menubar-wrapper">
 		<div id="menubar-vm">
 			<div id="menubar" class="menubar out">
 				<ul id="site-nav" class="menubar-section horizontal">
-
 					<li class="menubar-item bclogo"><a href="https://bandcamp.com"><div class="bc-ui logo"></div></a></li>
 					<li class="menubar-item extended"><a href="http://bandcamp.com/?from=fanbar#discover">discover</a></li>
 					<li class="search extended">
 						<!-- search -->
 						<form id="search" action="/search" method="get" data-bind="submit: search.validate">
-							<input id="search-field" type="text" title="" tabindex="1" autocomplete="off" maxlength="2048" name="q" placeholder="search bandcamp..." data-bind="value: search.inputField"><button tabindex="2" type="submit" title="search">
-								<span class="bc-ui menubar-search-icon">&nbsp;</span>&nbsp;</button>&nbsp;
-								<input type="hidden" name="from" value="fanbar">
-							</form>
-						</li>
+							<input id="search-field" type="text" title="" tabindex="1" autocomplete="off" maxlength="2048" name="q" placeholder="search bandcamp..." data-bind="value: search.inputField">
+							<button tabindex="2" type="submit" title="search">
+								<span class="bc-ui menubar-search-icon">&nbsp;</span>
+								&nbsp;
+							</button>&nbsp;
+							<input type="hidden" name="from" value="fanbar">
+						</form>
+					</li>
 
-					</ul>
+				</ul>
 
-					<ul id="user-nav" class="menubar-section horizontal">
+				<ul id="user-nav" class="menubar-section horizontal">
 
-						<li id="feed-main" class="menubar-item ">
-							<a href="https://bandcamp.com/jclaw/feed">
-								<span>feed</span>
-							</a>
-						</li>
+					<li id="feed-main" class="menubar-item ">
+						<a href="https://bandcamp.com/jclaw/feed">
+							<span>feed</span>
+						</a>
+					</li>
 
-						<li id="collection-main" class="menubar-item ">
-							<a href="https://bandcamp.com/jclaw">
-								<span>collection</span>
+					<li id="collection-main" class="menubar-item ">
+						<a href="https://bandcamp.com/jclaw">
+							<span>collection</span>
 
-							</a>
-						</li>
+						</a>
+					</li>
 
-						<li class="menubar-item ">
-							<a class="gear-dropdown-toggle">
-								<div>
-									<div class="bc-ui gear " data-bind="css: {admin: isAdmin()}"></div>
-									<span class="bc-ui menucaret"></span>
-								</div>
-							</a>
-						</li>
+					<li class="menubar-item ">
+						<a class="gear-dropdown-toggle">
+							<div>
+								<div class="bc-ui gear " data-bind="css: {admin: isAdmin()}"></div>
+								<span class="bc-ui menucaret"></span>
+							</div>
+						</a>
+					</li>
 
-					</ul>
-				</div>
-
+				</ul>
 			</div>
 
 		</div>
 
+	</div>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="script.js"></script>
-	</body>
-	</html>
+	<div id="centerWrapper">
+		<div id="propOpenWrapper">
+			<div id="pgBd" class="yui-skin-sam">
+
+				<div id="customHeaderWrapper">
+					<div id="customHeader">
+
+						<div class="desktop-header">
+							<a href="http://zuluzuluu.bandcamp.com"><img src="https://f4.bcbits.com/img/0007761098_100.png" width="975" height="180"></a>
+
+						</div>
+
+
+					</div>
+
+					<div class="bannercontainer">
+
+					</div>
+
+				</div>
+
+
+
+
+
+
+
+
+
+				<div class="content">
+					<form id="code_form">
+						<h2 class="form-header">Please enter your code:</h2>
+						<div class="fields">
+							<div class="form-block">
+								<label for="code-field">Code</label>
+								<input id="code-field" type="text" tabindex="1" name="code" value="" placeholder="e.g. lanz-gh9h" required>
+							</div>
+							<div class="form-block">
+								<label for="email-field">Email <span class="de-emphasized">(optional)</span></label>
+								<input id="email-field" type="text" tabindex="2" name="email" value="" placeholder="join the artist's mailing list">
+							</div>
+						</div>
+
+						<div class="collection_add">
+							<label class="collection_add_text">
+								<input id="collection_add" name="collection_add" type="checkbox" value="1" checked="">Add this item to my collection
+							</label>
+						</div>
+
+						<div id="buttons">
+							<button class="redeem_button" type="submit" name="redeem" value="Redeem">
+								<div>Redeem</div>
+							</button>
+						</div>
+						<div id="forlesswhitespace"></div>
+						<div class="small-message">
+							Already have an account? <a href="">Log in.</a>
+						</div>
+					</form>
+
+				</div>
+
+
+
+
+
+
+
+
+
+
+				<!-- <div style="clear:both"></div> -->
+			</div>
+			<div id="pgFt">
+				<div id="pgFt-inner" class="pgft-desktop">
+
+					<div id="footer-logo-wrapper">
+
+						<a id="footer-logo" href="https://bandcamp.com?from=logo"><span class="hiddenAccess">Bandcamp</span></a>
+
+						<span id="webapp-selector-ui" class="webapp-selector-ui" style="display:none" data-webapps="[{&quot;hostnameRange&quot;:[1,12],&quot;hostnameBase&quot;:&quot;bender&quot;,&quot;appNumbers&quot;:[1,7]}]"></span>
+					</div>
+
+					<ul id="legal" class="horizNav">
+
+						<li id="login"><a href="https://bandcamp.com/login">log in</a></li>
+
+						<li><a href="https://bandcamp.com/terms_of_use">terms of use</a></li>
+						<li><a href="https://bandcamp.com/privacy">privacy</a></li>
+						<li><a href="https://bandcamp.com/copyright">copyright policy</a></li>
+
+						<li id="site-status"><a href="http://twitter.com/bandcampstatus" target="_blank">status</a></li>
+
+
+
+						<li class="view-switcher desktop"><a>switch to mobile view</a></li>
+
+
+					</ul>
+					<span class="static-content">&nbsp;</span>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

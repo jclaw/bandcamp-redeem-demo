@@ -1,0 +1,83 @@
+.content {
+	text-align: center;
+	font-size: 110%
+}
+
+.de-emphasized {
+	color: #818285;
+}
+
+.form-header {
+	margin-bottom: 40px;
+}
+
+
+.fields {
+	margin-left: -110px;
+}
+
+.form-block {
+	margin-bottom: 20px;
+}
+
+.form-block label {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	margin-right: 14px;
+}
+
+.form-block input {
+	text-align: left;
+	font-size: 100%;
+	width: 20em;
+	padding: 5px;
+}
+
+.collection_add {
+	margin-top: .5em;
+}
+.collection_add input {
+	margin-right: .5em;
+}
+.collection_add_text {
+	/*font-size: 1.1em;*/
+}
+
+#buttons {
+	margin-top: 1.5em;
+	margin-bottom: 2em;
+}
+
+.redeem_button {
+	font-size: 110%;
+	color: white;
+	font-weight: 500;
+	margin: 0;
+	background: #1DA0C3;
+	border: none;
+	width: 20em;
+	padding: 6px 0;
+}
+.redeem_button:disabled {
+	color: gray;
+	border-color: gray;
+	text-decoration: none;
+}
+
+.notable {
+	color: red;
+}
+
+#forlesswhitespace {
+	padding: 25px;
+}
+
+#warning {
+	display: none;
+}
+
+.small-message {
+	color: #818285;
+	font-size: 86%;
+}

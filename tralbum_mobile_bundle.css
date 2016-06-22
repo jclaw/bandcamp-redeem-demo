@@ -1,0 +1,3049 @@
+/* concatenation of tralbum_phone.css, download_panel_phone.css, cart_phone.css, payment_prefs.css, card_icons.css, payment_prefs_phone.css, change_payment_method.css, change_payment_method_phone.css, policies_phone.css, bio_phone.css, fan_tralbum_phone.css, peekaboo_text.css, band_selector_phone.css, video_phone.css, artistsub_tralbum_phone.css */
+
+/* ------------- tralbum_phone.css --------------- */
+/*
+ * Tralbum page CSS: phone view.
+ *
+ * This file is specific to album, track, and related pages.
+ */
+
+
+/***** Tralbum title and art *****************************************/
+
+.trackView,
+#merch-item {
+    position: relative;  /* positioning context for #tralbumArt */
+}
+
+#merch-item .blank-art {
+    display: none;
+}
+
+#name-section {
+    line-height: 1.125rem;
+    text-align: center;
+}
+
+#name-section h3 {
+    font-size: 0.875rem;
+    display: inline-block;
+}
+
+#name-section h3 span a {
+    color:#333;
+}
+
+.trackView #name-section {
+    padding-top: 6.25%;  /* space it out from the top of the page/checkout */
+}
+
+.trackView.has-art #name-section {
+    padding-top: 103.125%;  /* lower the title below the tralbumArt; 100% + (2000/640) */
+}
+
+#merch-item.has-art.has-thumbs {
+    padding-top: 96.875%; /* lower the title below the main art and a row of thumbs; 75% + 0.25*75% + (2000/640) */
+}
+#merch-item.has-art {
+    padding-top: 78.125%;  /* lower the title below the 4:3 merch art; 75% + (2000/640) */
+}
+
+#merch-item .merchtype {
+    display: block;
+}
+
+#name-section > * {
+    display: inline;
+}
+
+#name-section h2 {
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.trackView #tralbumArt img {
+    width: 100%;
+    position: absolute;
+    top: 0;  /* raise the image above the trackTitle */
+}
+
+#merch-item > .art {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#merch-item img.main-art {
+    width: 100%;
+    height: 75%;
+}
+#merch-item .merch-thumbs {
+    margin-top: 2.6%;
+    width: 100%;
+    font-size: 0;
+}
+#merch-item .merch-thumbs > li {
+    display: inline-block;
+    width: 23%;
+    margin-right: 2.6%; /* 3 gaps to make up for 12% shortage (4x3%) */
+}
+#merch-item .merch-thumbs > li:last-child {
+    margin-right: 0;
+}
+#merch-item .merch-thumbs img {
+    width: 100%;
+    height: 75%;
+}
+
+#missing-tralbum-art {
+    display: none;
+}
+
+#merch-item .package-desc {
+    margin-bottom: 0.4rem;
+}
+
+.merchtype {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: normal;
+    margin: 0.25rem 0;
+}
+.merchtype:last-child {
+    margin-bottom: 0;
+}
+
+.merch-grid .merchtype {
+    margin-top: 0.2rem;
+    font-size: 0.625rem;
+}
+
+
+/* dark */
+
+.invertIconography #name-section h3 span a {
+    color: #919191;
+}
+
+/***** Item descriptions ********************************************/
+
+span.lightweightBreak {
+    display: inline-block;
+    width: 0em;
+    height: 0.5rem;
+}
+
+/***** Buy and share links ********************************************/
+
+.tralbumCommands > .buyItem+.buyItem {
+    margin: 2rem 0;
+}
+.buyItem,
+.tralbumCommands > .buyItem+.buyItem {
+    margin: 0 auto;
+}
+.buyAlbumLink {
+    margin: 0 0 2rem;
+}
+.buyItem .hd, .buyItem .bd {
+    display: block;
+}
+
+.buyItem .bd {
+   font-size: 0.8125rem;
+   line-height: 1rem;
+   word-wrap: break-word;
+   margin-bottom: 0.5rem;
+}
+
+.buyItem .ft {
+    font-size: 0.8125rem;
+}
+
+.buyItem .ft .end {
+    white-space: nowrap;
+}
+
+.buyItem h3 {
+    font-size: 0.9375rem;
+    font-weight: bold;
+    margin: 0 0 0.25rem;
+}
+.buyItem h3 a {
+    color: inherit;
+}
+
+.buyItem h4.notable {
+    font-weight: bold;
+    padding: 0.625rem 0 0.625rem;
+    font-size: 0.875rem;
+    text-align: center;
+    color: #c00;
+}
+
+.buyItemExtra {
+    font-size: 0.8125rem;
+    font-weight: normal;
+}
+
+.buyItemEdition .notable {
+    padding-left: 0.25rem;
+}
+
+.buy-offsite-item {
+    display: none;
+}
+
+#share-link {
+    font-weight: bold;
+}
+
+/* share-link icon */
+#share-link-share:before {
+    /* sprite h/w ratio: 1/1 */
+    content: '';
+    display: inline-block;
+    width: 1.3em;
+    height: 0;
+    padding-top: 1.3em; /* height */
+    margin-right: 0.3125rem;
+    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background-size: 500% auto;
+    background-position: 0 44%;
+    vertical-align: text-bottom;
+}
+
+.no-svg #share-link-share:before {
+    background-image: url(/img/mobile-sprites-20150520.png);
+}
+
+
+#share-link-embed {
+    display: none;
+}
+
+.buy-link {
+    background-image: none; /* clear any gradients set by the UA - I'm looking at you, Mobile Firefox*/
+    border: none;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.buy-link::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.invertIconography .yui-module {
+    color: #333;
+}
+
+.invertIconography .buyItem h4.notable {
+    color: #a30b0b;
+}
+
+.invertIconography #share-link-share:before {
+    background-position: 25% 44%; /* 25% == dark */
+}
+
+.buyItem .subscribe-login {
+    font-weight: normal;
+    font-size: 12px;
+    color: #888888;
+    margin-top: 10px;
+}
+
+
+/***** Package images ****************************************/
+
+.gallery_viewer {
+    margin: 2% 0 3%;
+    font-size: 0; /* eliminate single space between each list item */
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.gallery_item {
+    display: inline-block;
+    position: relative;
+    width: 18%;
+    height: 0;
+    padding-top: 13.5%;
+    margin-right: 2%;
+}
+
+ul.gallery_viewer li.gallery_item.first.last {
+    width: 40%;
+    padding-top: 30%;
+}
+
+.gallery_item.last {
+    padding-right: 0;
+}
+
+.gallery_item img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: solid #ccc thin;
+   -moz-box-sizing:    border-box;
+   -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+}
+
+/* dark */
+
+.invertIconography .gallery_item img {
+    border: solid #717171 thin;
+}
+
+/***** Track list ****************************************/
+
+.track_list {
+    width: 100%;
+    margin: 1.875rem 0;
+}
+
+.track_list tr {
+    vertical-align: top;
+    border-top: thin solid #d5d5d5;
+    border-bottom: thin solid #d5d5d5;
+}
+
+.track_list td {
+    padding: 0.625rem 0 0.563rem;
+}
+
+.track_list a {
+    color: #333;
+}
+
+.track_list .play-col {
+    width: 9%;
+    text-align: center;
+}
+
+.track_list .track-number-col {
+    font-size: 0.8125rem;
+    width: 5%;
+    text-align: right;
+    padding-right: 0.625rem;
+
+/*    font-size: 0.8125rem; */
+}
+
+.track_list .title {
+    font-size: 0.8125rem;
+}
+
+.track_list .title > * {
+    padding-right: 0.3em;
+}
+
+.track_list .info-col {
+    width: 9%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* repurpose the info-col by hiding its original contents */
+.track_list .info-col .info_link {
+    display: none;
+}
+
+/* ">" icon; see "valign layout hack" below */
+.track_list .linked .info-col:after {
+    /* sprite h/w ratio: 1/1 */
+    content: '';
+    display: inline-block;
+    width: 0.8em;
+    height: 0;
+    padding-top: 0.8em; /* height */
+    vertical-align: middle;
+    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background-size: 500% auto;
+    background-position: 0 16%;
+}
+.invertIconography .track_list .linked .info-col:after {
+    background-position: 25% 16%; /* 25% == dark */
+}
+
+.no-svg .track_list .linked .info-col:after {
+    background-image: url(/img/mobile-sprites-20150520.png);
+}
+
+.track_list .download-col {
+    display: none;
+}
+
+.track_list tr.lyricsRow {
+   display:none;
+}
+
+/* valign layout hack: this element introduces inline text to the cell, allowing us to use
+   vertical-align:middle on the cell icon element. The result is that the icon is always
+   vertically aligned with the text in the other cells in a given row, regardless of font size or
+   line height. Note that the "content" property can't be empty or a regular space in this case,
+   but a nbsp works. */
+.track_list .play-col:before, .track_list .info-col:before {
+    content: '\00A0'; /* nbsp */
+    display: inline-block;
+    background: red;
+    width: 0;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+/*  hidden lyrics */
+
+.hiddenLyrics {
+   display:none;
+}
+
+/* dark */
+.invertIconography .track_list tr {
+    vertical-align: top;
+    border-top: thin solid #232323;
+    border-bottom: thin solid #232323;
+}
+
+.invertIconography .track_list a {
+    color: #919191;
+}
+
+/***** Tralbum about, credit, tags ************************/
+
+.about-label, .tags-inline-label, .feed-label, .tralbum-feed {
+    display: none;
+}
+
+.tralbum-about {
+    font-style: italic;
+}
+
+.tralbumData, .info {
+    margin:0.3125rem 0 0 0;
+    font-size: 0.8125rem;
+    line-height: 140%;
+    word-wrap: break-word;
+}
+
+.info.license {
+    margin: 1.25rem 0 0;
+}
+
+.credits-label, .lyrics-label, .tags-label {
+    margin: 1.25rem 0 0;
+    font-size: 0.9375rem;
+    font-weight: bold;
+}
+
+.tralbum-tags .tag {
+    display: inline-block;
+   -moz-box-sizing:    border-box;
+   -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.5em 0.3em 0.3em 0;
+    padding: 0.2em 0.6em;
+    white-space: nowrap;
+    border-radius: 0.4em;
+    background: rgba(0,0,0,0.04);
+}
+
+/* dark */
+.invertIconography .tralbum-tags .tag {
+    background: rgba(190,190,190,0.08);
+}
+
+/***** sidebar stuff (also see bio_phone.css) *************************/
+
+.rightColumn .title,
+h3.more-merch {
+    margin: 1.875rem 0 0.9375rem;
+    border-top: solid #ccc thin;
+    padding-top: 1.25rem;
+    font-size: 0.9375rem;
+    text-transform: lowercase;
+}
+
+#band-name-location .title {
+    border-top:none;
+    font-weight: bold;
+    text-transform: inherit;
+}
+
+#band-name-location .location {
+    display: block;
+}
+
+/* Don't lowercase band name in the more merch heading */
+h3.more-merch a {
+    text-transform: none;
+}
+
+.more-merch-container .merch-grid > li {
+    display: none;
+}
+.more-merch-container.show-all .merch-grid > li,
+.more-merch-container .merch-grid > li.first-four {
+    display: inline-block;
+}
+
+/* dark */
+.invertIconography .rightColumn .title,
+.invertIconography h3.more-merch {
+    border-top: solid rgba(255,255,255,0.2) thin;
+}
+
+/***** shows, discography, artists grid, music grid, merch grid, index page *******/
+
+ol.editable-grid p {
+    margin: 0;
+}
+
+ol.editable-grid span.artist-override {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+#discography ul,
+ol.editable-grid,
+#indexpage .indexpage_list {
+    margin-bottom: -6%; /* compensate for bottom margin of final li row */
+}
+
+#discography li,
+#indexpage .indexpage_list_cell {
+    display: inline-block;
+    width: 46%;
+    margin-bottom: 6%;
+    vertical-align: top;
+    font-size: 0.8rem;
+}
+
+ol.editable-grid > li, ol.editable-grid.filtered > li {
+    display: inline-block;
+    width: 48%;
+    margin: 0 0 6% 0;
+    vertical-align: top;
+    font-size: 0.8rem;
+}
+
+ol.editable-grid > li.odd {
+    margin-right: 4%;
+}
+
+#discography.truncated li.extra {
+    display: none;
+}
+
+#discography li:nth-child(odd),
+#indexpage .indexpage_list_cell.odd {
+    margin-right: 4%;
+}
+
+#discography .thumbthumb,
+ol.editable-grid .art,
+#discography .cell,
+#indexpage .ipCell {
+    display: inline-block;
+    width: 100%;
+}
+
+#discography .thumbthumb img,
+#indexpage .ipCell img {
+    width: 100%;
+}
+
+ol.editable-grid .art {
+    position: relative;
+    height: 0;
+    padding-top: 75%;
+    overflow: visible;
+    background: rgba(255,255,255,0.5);
+}
+
+ol.editable-grid .square .art {
+    padding-top: 100%;
+}
+
+ol.editable-grid .art img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* empty merch items are omitted from the grid, so only need to handle discography here */
+#discography .thumbthumb.empty {
+    height: auto; /* layout madness! height is determined by inner pseudo-elem, below */
+    border: solid rgba(0,0,0,0.18) thin;
+    background-color: rgba(0,0,0,0.05);
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+}
+
+#indexpage .indexpage_list_cell.empty {
+    display: none;
+}
+
+/* The .thumbthumb.empty element can't use the padding==height trick, as that can't take into
+   account the height of the borders. So we use an inner elem to determine the height. */
+#discography .thumbthumb.empty:before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 100%; /* height */
+}
+
+#discography .trackTitle,
+ol.editable-grid .title,
+#indexpage .ipCellLabel1,
+.artists-grid-name {
+    font-size: 0.75rem;
+    margin-top: 0.375rem;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+.artists-grid-location {
+    font-size: 0.75rem;
+}
+
+#indexpage .ipCellLabel2 {
+    font-size: 0.75rem;
+    margin-top: 0.2em;
+}
+
+#discography li a,
+ol.editable-grid a,
+#indexpage .ipCellLabel a {
+    color: #333;
+}
+
+#discography .trackYear,
+ol.merch-grid .price {
+    font-size: 0.625rem;
+    margin-top: 0.2em;
+    color: #777;
+}
+
+ol.merch-grid .price.sold-out {
+    color: #d33;
+}
+
+ol.merch-grid .price > .price {
+    font-weight: bold;
+}
+
+.more-merch-link {
+    display: none;
+}
+#discography .showMore,
+.more-merch-container .more-merch-link {
+    display: block;
+    margin-top: 1.25rem;
+    font-size: 0.8125rem;
+}
+
+.peekaboo-list.truncated .peekaboo-list-extra {
+    display: none !important;
+}
+
+/* band selector */
+
+.label-band-selector {
+    margin-top: 6%;
+}
+
+/*
+ * If the font size of the <select> is less than 16px, iOS zooms into the control on focus (which
+ * is sort of unnecessary for a <select> element), then doesn't zoom out on blur. Having to pinch to
+ * zoom out each time you update the filter is not good. There are a number of JS-based workarounds
+ * here: http://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone
+ * but they're all horrible and seems to break with each new iOS version, so let's just boost the font
+ * size of the band selector so it doesn't zoom at all.
+ */
+div.label-band-selector,
+div.label-band-selector select,
+div.label-band-selector select:focus {
+    font-size: 16px;
+}
+
+/* showography */
+
+#showography ul {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    font-size: 0.75rem;
+    margin: 1rem 0 0;
+}
+
+#showography li {
+    display: table-row;
+    height: 2.5em;
+}
+
+#showography li > * {
+    display: table-cell;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#showography .secondaryText {
+    color: #333;
+}
+
+#showography .showDate {
+    width: 4em;
+}
+
+#showography .showVenue {
+    padding-right: 1em;
+}
+
+#showography .showMore {
+    font-size: 0.8rem;
+}
+
+
+/* dark */
+
+.invertIconography #discography li a,
+.invertIconography ol.editable-grid a,
+.invertIconography #indexpage .ipCellLabel a {
+    color: #777;
+}
+
+.invertIconography #discography .thumbthumb.empty {
+    border: solid rgba(255,255,255,0.1) thin;
+    background-color: rgba(255,255,255,0.03);
+}
+
+.invertIconography #discography .trackYear,
+.invertIconography ol.merch-grid .price {
+    color: #5e5e5e;
+}
+
+.invertIconography ol.merch-grid .price.sold-out {
+    color: #d33;
+}
+
+.invertIconography #showography .secondaryText {
+    color: #5e5e5e;
+}
+
+/***** Inline player ************************************************/
+
+/*
+    The major player elements (Play, slider, Next/Prev) are laid out as inline-block children.
+    To prevent spaces between the tags from causing gaps in the layout, I've chosen to format
+    the html to remove them. The font-size:0 alternative generally works, but not on all mobile
+    browsers we're targeting (ex: Android 2.3.4).
+*/
+
+.inline_player {
+    display: none; /* overridden */
+    position: relative;
+    margin: -0.125rem 0 0.5rem;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: -0.5%;
+}
+
+.inline_player.hidden {
+    max-height: 0;
+}
+
+.inline_player.hidden > .inline_player_inner {
+    display: none;
+}
+
+.trackView .inline_player {
+    display: block;
+    max-height: 500px;
+    transition: max-height 3s ease-out;
+    -moz-transition: max-height 3s ease-out;
+    -webkit-transition: max-height 3s ease-out;
+}
+
+.inline_player_inner > * {
+    vertical-align: middle;
+}
+
+.inline_player .playbutton {
+    position: relative;
+    display: inline-block;
+    width: 18%;
+    height: 0;
+    padding-top: 18%; /* height */
+    margin-right: 0.5%;
+}
+
+.inline_player .playbutton .icon {
+    /* sprite h/w ratio: 1/1 */
+    position: absolute;
+    width: 45%;
+    height: 0;
+    padding-top: 45%; /* height */
+    top: 27.5%;
+    left: 27.5%;
+    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background-size: 500% auto;
+    background-position: 0 0;
+}
+
+.no-svg .inline_player .playbutton .icon {
+    background-image: url(/img/mobile-sprites-20150520.png);
+}
+
+.inline_player .playbutton.playing .icon {
+    background-position: 0 4%;
+}
+
+.inline_player .playbutton.busy .icon {
+    background-image: url(/img/playerbusy.svg);
+    background-size: 100% auto;
+    background-position: 50% 50%;
+}
+
+.no-svg .inline_player .playbutton.busy .icon {
+    background-image: url(/img/playerbusy_transp.gif);
+}
+
+.inline_player .progbar {
+    position: relative;
+    display: inline-block;
+    width: 42%;
+    border: solid 0.0625rem;
+    border-color: transparent #fff #fff transparent;
+    border-radius: 99999rem; /* max */
+}
+
+/* single-track player has no next/prev buttons, so progbar is a bit wider, roughly visually centered */
+.inline_player.one-track .progbar {
+    width: 44%;
+}
+
+.inline_player.one-track .time_total {
+    margin-right: 20%;
+}
+
+/*
+   A note on units: starting with progbar_empty, I use rems in several places to specify
+   element and border sizes. Ideally we'd use percentages for everything, but borders
+   don't accept % units, and the height of progbar_empty can't be based on its parent
+   because the parent doesn't have an explicit height (and can't, as it's based on the
+   height of its other contents). The better unit to use here would be "vw", which is relative
+   to the viewport width, but that isn't available in most browsers as of early 2012.
+
+   A note on border-radius: because the heights of some elements here are based on the heights
+   of inner or outer relatives, ideally we'd use border-radius: 50% to get fully-roundend ends.
+   Unfortunately, using % doesn't appear to be supported in Android 2.x. Luckily an easy hack
+   exists: just set the radius to a huge value, letting the browser pin the actual radius to
+   its maximum (half the height of the element).
+
+    - sdg 2012.03.12
+ */
+
+.inline_player .progbar_empty {
+    position: relative;
+    width: auto;
+    height: 0.438rem;
+    overflow: hidden;
+    border: solid 0.1rem;
+    border-color: rgba(0,0,0,0.2) rgba(0,0,0,0.05) rgba(0,0,0,0.05) rgba(0,0,0,0.2);
+    border-radius: 99999rem; /* max */
+}
+
+/* inner shadow above the 'empty' and 'fill' content */
+.inline_player .progbar_empty:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 99999rem; /* max */
+    -webkit-box-shadow: inset 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.2);
+    box-shadow:         inset 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.2);
+}
+
+.inline_player .progbar_fill {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: #333333;
+    opacity: 0.1;
+    border-radius: 99999rem; /* max */
+}
+
+/* outer thumb */
+.inline_player .thumb {
+    position: absolute;
+    left: 0;
+    top: -0.3125rem;
+    border: solid 0.0625rem #afafaf;
+    border-radius: 99999rem; /* max */
+    cursor: pointer;
+    -webkit-box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.2);
+    box-shadow:         0 0.0625rem 0.125rem 0 rgba(0,0,0,0.2);
+}
+
+/* inner thumb */
+.inline_player .thumb:after {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: #efefef;
+    border: solid #fff 0.0625rem;
+    border-radius: 99999rem; /* max */
+}
+
+.inline_player .time {
+    display: inline-block;
+    padding: 0;
+    font-size: 0.625rem;
+    color: rgba(0,0,0,0.5);
+}
+
+.inline_player .time.hiddenelem {
+    visibility: hidden; /* reserve layout space */
+}
+
+.inline_player .time_elapsed {
+    padding-right: 1%;
+    text-align: right;
+}
+
+.inline_player .time_total {
+    padding-left: 1%;
+    text-align: left;
+/*    padding-right: 1%;*/
+}
+
+.inline_player .nextprev {
+    position: relative;
+    display: inline-block;
+    width: 10%;
+    height: 0;
+    padding-top: 18%; /* height */
+}
+
+.inline_player .nextprev .icon {
+    /* sprite h/w ratio: 1/1 */
+    position: absolute;
+    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    width: 40%;
+    height: 0;
+    padding-top: 40%; /* height */
+    top: 39%;
+    left: 30%;
+    background-size: 500% auto;
+    background-position: 0 8%;
+}
+
+.no-svg .inline_player .nextprev .icon {
+    background-image: url(/img/mobile-sprites-20150520.png);
+}
+
+.inline_player .prevbutton .icon {
+    left: 45%;
+    background-position: 0 12%;
+}
+
+.inline_player .nextprev.hiddenelem {
+    opacity: 0.2;
+}
+
+/* for the single-track player, hide next/prev entirely */
+.inline_player.one-track .nextprev.hiddenelem {
+    display: none;
+}
+
+.inline_player .track_info {
+    margin: auto 0;
+    padding: 1% 5%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.inline_player .track_info span.title {
+    padding: 0 0 1%;
+}
+
+.inline_player .track_info a {
+    color: #333;
+}
+
+/* don't display the track title for one-track players */
+.inline_player .title-section.hiddenelem {
+    display: none;
+}
+
+.inline_player .video-link.is-hidden {
+    display: none;
+}
+
+.inline_player a.video-link {
+    margin-left:15px;
+    color: #0687F5;
+}
+
+a.video-link, a.has-video {
+    padding: 5px 7px 5px 7px;
+    background-color: rgba(0,0,0,0.07);
+    color: #0687F5;
+}
+
+div.has-video-wrapper {
+    text-align:center;
+}
+
+.invertIconography a.video-link,
+.invertIconography a.has-video {
+   background-color: rgba(50,50,50,0.9);
+}
+
+/* dark */
+.invertIconography .inline_player .playbutton .icon {
+    background-position: 25% 0; /* 25% == dark */
+}
+
+.invertIconography .inline_player .playbutton.playing .icon {
+    background-position: 25% 4%; /* 25% == dark */
+}
+
+.invertIconography .inline_player .playbutton.busy .icon {
+    background-image: url(/img/playerbusy_dark.svg);
+    background-position: 50% 50%;
+}
+
+.no-svg .invertIconography .inline_player .playbutton.busy .icon {
+    background-image: url(/img/playerbusy_mobile_dark.gif);
+}
+
+.invertIconography .inline_player .nextprev .icon {
+    background-position: 25% 8%; /* 25% == dark */
+}
+
+.invertIconography .inline_player .prevbutton .icon {
+    left: 45%;
+    background-position: 25% 12%; /* 25% == dark */
+}
+
+.invertIconography .inline_player .progbar {
+    border-color: rgba(255,255,255,0.05) rgba(255,255,255,0.1) rgba(255,255,255,0.2) rgba(255,255,255,0.1);
+}
+
+.invertIconography .inline_player .track_info a {
+    color: #777;
+}
+
+.invertIconography .inline_player .progbar_empty {
+    border-color: rgba(0,0,0,0.2) rgba(0,0,0,0.05) rgba(0,0,0,0.05) rgba(0,0,0,0.2);
+}
+
+.inline_player .progbar_empty:before {
+    -webkit-box-shadow: inset 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.2);
+    box-shadow:         inset 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.2);
+}
+
+.inline_player .progbar_fill {
+    background: #515151;
+    opacity: 0.5;
+}
+.invertIconography .inline_player .thumb {
+    -webkit-box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,1);
+    box-shadow:         0 0.0625rem 0.125rem 0 rgba(0,0,0,1);
+    border: solid #515151 0.0625rem;
+}
+
+.invertIconography .inline_player .thumb:after {
+    background: #777;
+    border: solid #333 0.0625rem;
+}
+
+.invertIconography .inline_player .time {
+    color: rgba(119,119,119,0.7);
+}
+
+
+
+/***** Track list player ********************************************/
+
+/* see "valign layout hack" above */
+.track_list .play-col a {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1rem; /* 1.25rem */
+    vertical-align: middle;
+    padding: 0 0 0 0.625rem;
+}
+
+.track_list .play_status {
+    /* sprite h/w ratio: 1/1 */
+    display: block;
+    width: 0.6875rem;
+    height: 0.6875rem;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background-size: 500% auto;
+    background-position: 0 0;
+}
+
+.no-svg .track_list .play_status {
+    background-image: url(/img/mobile-sprites-20150520.png);
+}
+
+.track_list .play_status.disabled,
+.invertIconography .track_list .play_status.disabled,
+.no-svg .track_list .play_status.disabled {
+    background-image:none;
+}
+
+
+.track_list .play_status.playing {
+    background-position: 0 4%;
+}
+
+/* dark */
+.invertIconography .track_list .play_status {
+    background-position: 25% 0; /* 25% == dark */
+}
+
+.invertIconography .track_list .play_status.playing {
+    background-position: 25% 4%; /* 25% == dark */
+}
+.track_row_view .title .has-video {
+    float: right;
+    padding: 4px 7px 4px 7px;
+    background-color: rgba(0,0,0,0.07);
+    color: #0687F5;
+}
+tr.track_row_view, div.track_info {
+    position:relative;
+}
+.invertIconography .track_row_view .title .has-video {
+    background-color: inherit;
+}
+
+
+
+
+
+/***** Dialog instances **********************************/
+
+.share-dialog li {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+
+/***** Bubble message instances **************************/
+
+.added-to-cart {
+    color: #0687F5;
+    border-color: #0687F5;
+}
+
+/* up arrow icon */
+.added-to-cart:after {
+    /* sprite h/w ratio: 1/1 */
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 0;
+    padding-top: 1em; /* height */
+    margin-left: 0.5rem;
+    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background-size: 500% auto;
+    background-position: 0 20%;
+}
+
+.no-svg .added-to-cart:after {
+    background-image: url(/img/mobile-sprites-20150520.png);
+}
+
+/* dark */
+.invertIconography .added-to-cart {
+    color: #0687f5;
+    border-color: #0687f5;
+}
+
+
+/***** Footer **********************************************/
+
+#pgFt {
+    background: #333;
+}
+#pgFt a {
+    color: #999;
+}
+
+/* dark */
+.invertIconography #pgFt {
+    background: #000;
+}
+.invertIconography #pgFt a {
+    color: #777;
+}
+
+
+/***** Misc **********************************************/
+
+.goto-top-button.compound-button {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+}
+
+.goto-top-button span:first-child {
+    padding-right: 1.2em; /* compensates for width of icon, below, for text centering */
+}
+
+/* up arrow icon */
+.goto-top-button:before {
+    /* sprite h/w ratio: 1/1 */
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 0;
+    padding-top: 1em; /* height */
+    margin-right: 0.3125rem;
+    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background-size: 500% auto;
+    background-position: 0 20%;
+}
+
+.no-svg .goto-top-button:before {
+    background-image: url(/img/mobile-sprites-20150520.png);
+}
+
+.invertIconography .goto-top-button:before {
+    background-position: 25% 20%; /* 25% == dark */
+}
+
+
+/***** Private Streaming ******************************/
+
+
+#top-banner {
+    width: 100%;
+    background-color: #ffffc5;
+    text-align: center;
+    line-height: 140%;
+    padding: 1rem 0.5rem;
+}
+
+#top-banner.private-streaming {
+    font-size: 0.8125rem;
+    color: #999;
+    font-family: Georgia, serif;
+    text-transform: lowercase;
+    background: #3e3d44;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#3e3d44), color-stop(100%,#0a0a0a));
+    background: -webkit-linear-gradient(-45deg,  #3e3d44 0%,#0a0a0a 100%);
+    background: linear-gradient(-45deg,  #3e3d44 0%,#0a0a0a 100%);
+}
+
+#top-banner.private-streaming .label {
+    display: inline-block;
+}
+
+#top-banner.private-streaming .title {
+    text-transform: none;
+    font-style: italic;
+    display: inline-block;
+    max-width:90%;
+}
+
+/***** Gifting ******************************/
+
+/*h4.ft.compound-button.send-as-gift {
+    margin-top: 1.25rem;
+}*/
+
+/***** Hide desktop elements ******************************/
+
+#editDeleteCommands,
+.edit-save-buttons,
+.merch-edit-link,
+.license-label,
+.thumbthumb .warningBadge,
+.editable-grid .warningBadge,
+#share-buttons-list,
+.collected-by, .share-collect-controls,
+#private-merch-heading, .editable-grid.private,
+.merch-page #discography,
+.seekText, .seekMask
+{
+    display: none !important;
+}
+
+/***** Buy Full Discography elements **********************************/
+
+.buyItem .band-link {
+    line-height: 125%;
+}
+
+.buyItem.buyFullDiscography .art {
+    font-size: 0;
+    line-height: 1;
+    margin: 0.75rem 0;
+}
+
+.buyItem.buyFullDiscography h3:after {
+    content: '';
+}
+
+.buyItem.buyFullDiscography strong {
+    font-weight: bold;
+}
+
+.buyFullDiscography .art.compact .art-thumb {
+    margin-right: -15%;
+}
+
+.buyFullDiscography .art .art-thumb {
+    background-image: url('/img/bg-mobile-light-20120612.gif');
+    background-size: 100% 100%;
+    display: inline-block;
+    height: 0;
+    margin-right: 2%;
+    outline: 1px solid rgba(0,0,0,0.1);
+    outline-offset: -1px;
+    padding-bottom: 23%;
+    position: relative;
+    width: 23%;
+}
+.invertIconography .buyFullDiscography .art-thumb {
+    outline: 1px solid rgba(255,255,255,0.18);
+}
+
+.buyFullDiscography .art .art-thumb.empty::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+}
+
+.invertIconography .buyFullDiscography .art .art-thumb.empty::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+}
+
+.buyFullDiscography .art .art-thumb.thumb-glow {
+    -webkit-box-shadow: 3px 0px 4px -3px rgba(0, 0, 0, 0.2), inset -1px 0 0 0 rgba(255,255,255,0.33);
+       -moz-box-shadow: 3px 0px 4px -3px rgba(0, 0, 0, 0.2), inset -1px 0 0 0 rgba(255,255,255,0.33);
+            box-shadow: 3px 0px 4px -3px rgba(0, 0, 0, 0.2), inset -1px 0 0 0 rgba(255,255,255,0.33);
+}
+
+.buyFullDiscography .art .art-thumb.thumb-glow.last-visible {
+    border-right: 0;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+}
+
+.invertIconography .buyFullDiscography .art .art-thumb {
+    background-image: url('/img/bg-mobile-dark-20120809.gif');
+    outline: 0.1rem solid rgba(255,255,255,0.18);
+}
+
+.buyFullDiscography .art .more-button {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 23%;
+    height: 0;
+    padding-bottom: 23%;
+    background-color: rgba(0,0,0,0.07);
+    text-align: center;
+    margin-left: 20%;
+}
+
+.buyFullDiscography .art .more-button .number-of-releases {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.invertIconography .buyFullDiscography .art .more-button {
+    background-color: rgba(255,255,255,0.15);
+}
+
+
+.buyFullDiscography .art .more-button .count,
+.buyFullDiscography .art .more-button .releases {
+    margin: 0;
+}
+
+.buyFullDiscography .art .more-button .count {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+}
+
+.buyFullDiscography .art .more-button .releases {
+    font-size: 0.750rem;
+}
+
+.buyFullDiscography .bd p {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+
+/* ------------- download_panel_phone.css --------------- */
+/* Buy/download dialog and related (phone view) ---------- */
+
+.buy-dlg {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+}
+
+.buy-dlg select,
+.buy-dlg input.textInput {
+    max-width: 95%;
+}
+
+.buy-dlg input.numeric {
+    width: 72px;
+    padding: 0 5px;
+    color: #333;
+    font-size: 24px;
+    text-align: right;
+}
+
+.buy-dlg #orderQuantity.numeric {
+    text-align: left;
+}
+
+.buy-dlg h3 {
+    margin: 0 0 0.5em;
+    color: #333;
+}
+
+.buy-dlg .section {
+    margin: 18px 20px;
+}
+.buy-dlg .section:empty {
+    display:none;
+}
+
+.buy-dlg .alert {
+    margin: 0.3em 0 0;
+}
+
+.buy-dlg .disabled {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.buy-dlg .warning {
+    background: lightyellow;
+    padding: 5px;
+    margin: -5px;
+}
+
+/* ----- buttons ------------------------------- */
+
+.buy-dlg .ft {
+    font-size: 0;
+    text-align: left;
+}
+
+.buy-dlg .buttons-section {
+    white-space: nowrap;
+    clear:both;
+}
+
+.buy-dlg .buttons-section button {
+    background-color: #4e8e25;
+    border: none;
+    color: #fff;
+    display: block; /* enables margin collapsing */
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    margin: 0;
+    text-decoration: none;
+}
+.buy-dlg .buttons-section button:hover,
+.buy-dlg .buttons-section button:focus,
+.buy-dlg .buttons-section button:active {
+    background-color:#448a19;
+}
+
+.buy-dlg .cart-button-wrapper button {
+    background-color: #0687f5;
+}
+.buy-dlg .cart-button-wrapper button:hover,
+.buy-dlg .cart-button-wrapper button:focus,
+.buy-dlg .cart-button-wrapper button:active {
+    background-color: #007deb;
+}
+
+.buy-dlg .checkout-button-wrapper,
+.buy-dlg .cart-button-wrapper {
+    display: inline-block;
+    margin: 0 4% 0 0;
+    width: 48%;
+}
+.buy-dlg .cart-button-wrapper {
+    margin-right: 0;
+    vertical-align: top;
+}
+
+.buy-dlg .buttons-section .or {
+    padding: 0 0.1em;
+    color: #999;
+}
+
+/* ----- paypal payment ------------------------------- */
+
+.buy-dlg .format-section {
+    color: #666;
+}
+
+.buy-dlg .nyp-summary {
+    display: inline-block; /* don't allow this content to partially wrap; do it all-or-nothing */
+    margin-top: 0.3em;     /* margin visible if it wraps */
+}
+
+.buy-dlg .price .secondary, .buy-dlg .small-text {
+    color: #666;
+}
+
+.buy-dlg .small-text {
+    font-size: 14px; /* we want footer text to appear, even tho it's in .ft */
+}
+
+.buy-dlg .icon-cc {
+    text-indent: -9999px;
+    display: inline-block;
+    transform: scale(0.9);
+}
+
+.buy-dlg .display-price {
+    font-size: 24px;
+}
+
+.buy-dlg .fixed-price {
+    font-weight: bold;
+}
+
+.buy-dlg #normal-price-wrapper {
+    padding-right: 0.3em;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.buy-dlg .nyp-summary-discounted-price {
+    color: green;
+    font-weight: bold;
+}
+
+.buy-dlg .pricing-extras {
+    margin: 0.3em 0 0;
+}
+
+.buy-dlg .button-footer {
+    max-width: 100%;
+    width: 200px;
+    text-align: center;
+    margin-top:14px;
+}
+
+/* ----- discounts ------------------------------- */
+
+.buy-dlg #discountInput {
+    width: 7em;
+}
+
+.buy-dlg .discount-display {
+    color: rgb(128,128,128);
+    font-size: 116%;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.buy-dlg .discount-verified .discount-display {
+    color: green;
+    font-style: normal;
+}
+
+.buy-dlg .discount-verified.error .discount-display {
+    color: #CC0000;
+    font-style: normal;
+}
+
+.buy-dlg .discount-verified .checkmark {
+    /* bg img from bc-ui class */
+    display: inline-block;
+    width: 14px;
+    height: 11px;
+    margin: 0 3px 0 1px;
+    background-position: 0 -6px;
+}
+
+.buy-dlg .discount-verified.error .checkmark {
+    display: none;
+}
+
+.buy-dlg .discount-code .busy-icon {
+    display: inline-block;
+    height: 1.2em;
+    width: 1.2em;
+    margin-right: 0.2em;
+    vertical-align: text-bottom;
+    background: url(/img/loading-dark.gif) no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.buy-dlg .discount-code a.change {
+    padding-left: 0.3em;
+}
+
+.buy-dlg .discount-code .alert {
+    display: block; /* visible by default; let KO manage visibility */
+}
+
+.buy-dlg .discount-code .friendly {
+    color: #4f8e25;
+}
+
+.buy-dlg .subscriber-discount-display {
+    padding-right: 0.4em;
+    color: green;
+    font-weight: bold;
+}
+
+.buy-dlg .discount-switch-to-code {
+    white-space: nowrap;
+}
+
+/* ----- purchase note ------------------------------- */
+
+.buy-dlg .purchase-note-section {
+    margin-bottom: 2.5em;
+}
+.buy-dlg .purchase-note-section.with-notify-me {
+    margin-bottom: 1.5em;
+}
+
+.buy-dlg .purchase-note-section .emphasis {
+    font-weight: bolder;
+}
+
+.buy-dlg #purchase-note-footer {
+    margin-bottom: 2.5em;
+}
+
+.buy-dlg #purchase-note-input {
+    width: 96%;
+}
+
+.buy-dlg #purchase-note-countdown {
+    margin-right: 2%;
+    float: right;
+}
+
+/* ----- notify me ------------------------------- */
+
+.buy-dlg .notify-me {
+    margin-bottom: 2em;
+}
+
+.buy-dlg .notify-me .section input,
+.buy-dlg .notify-me .section div {
+    vertical-align: top;
+}
+
+.buy-dlg .notify-me-message,
+.buy-dlg .notify-me-label-message {
+    font-weight: normal;
+    display: inline-block;
+    width: 90%;
+}
+
+
+
+/* ----- email payment ------------------------------- */
+
+.buy-dlg .email-section .subsection {
+    margin: 0 0 1em;
+}
+
+.buy-dlg #fan_email_address {
+    width: 90%;
+    margin: 0.2em 0;
+}
+
+.buy-dlg #fan_email_country {
+    width: 54%;
+}
+
+.buy-dlg #fan_email_postalcode {
+    width: 34%;
+    margin-left: 1%;
+}
+
+/* ----- gift ------------------------------- */
+
+.gift-panel input[type='text'].has-validation-error, .gift-panel textarea.has-validation-error{
+    border-color: #e00;
+}
+
+.gift-panel input[type='textarea'].has-validation-error{
+    border-color: #e00;
+}
+
+.gift-panel #gift_sender_note_error {
+    margin-top: 5px;
+}
+
+.gift-panel .alert,
+.gift-panel .gift-alert {
+    color: #e00;
+    font-size: 85%;
+    font-weight: normal;
+    margin: 0 0 8px 0;
+}
+
+.gift-panel .alertActive {
+    display: block;
+}
+
+.gift-panel .alertActive.desktop {
+    display: none;
+}
+
+.gift-panel .section {
+    margin:0 0 9px;
+}
+
+.buy-dlg .buttons-section button:disabled {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: default;
+}
+
+.gift-input, .gift-input-left {
+    margin-bottom: 8px;
+}
+
+.gift-input-left {
+    width: 16em;
+}
+
+.gift-options-full {
+
+}
+
+.gift-options-left {
+    width: 80%;
+    float: left;
+}
+
+.gift-options-right {
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+.gift-confirm-container .phone {
+    display: block;
+}
+
+.gift-confirm-container .desktop {
+    display: none;
+}
+
+.gift-confirm-container .gift-options-right > .gift-icon-large,
+.gift-panel .gift-options-right > .gift-icon-large {
+    width: 4rem;
+    height: 68px;
+    display: inline-block;
+    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background-size: 500% auto;
+    background-position: 0 80%;
+    opacity: 0.1;
+    vertical-align: middle;
+    margin-bottom: 1rem;
+}
+.gift-panel .gift-options-right > .gift-icon-large {
+    margin-bottom: 0;
+}
+
+.gift-primary {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.gift-recipient-email {
+    margin-top: 15px;
+    /*font-size: 13.5px;*/
+}
+
+.gift-secondary {
+    font-weight: normal;
+    color: gray;
+}
+
+.send-as-gift {
+    margin-top: 1.25rem;
+}
+
+.gift-field {
+    width: 100%;
+    margin: 8px 0 0 0;
+}
+#gift-buttons {
+    font-size:0;
+}
+.buy-dlg .buttons-section button.gift-button {
+    padding: 0 1em;
+    background: #097EC6;
+    display: inline-block;
+    margin: 16px 0 0;
+}
+.buy-dlg .buttons-section button.gift-button.correct,
+.buy-dlg .buttons-section button.gift-button.go-back {
+    margin-right: 4%;
+    padding: 0;
+    text-align: center;
+    width: 48%;
+}
+.buy-dlg .buttons-section button.gift-button.go-back {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    color: #007df9;
+    margin-right:0;
+}
+
+.gift-field > textarea {
+    width: 95%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.gift-field > input {
+    width: 100%;
+}
+
+.gift-field > input[type="text"] { /* to stop input from overflowing the parent container */
+   -moz-box-sizing:    border-box;
+   -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+}
+
+/* get physical */
+
+.gift-field-half > #countrySelect {
+    width: 15em;
+}
+
+.gift-field-half > #stateSelect {
+    width: 15em;
+    margin-top: 5px;
+}
+
+.gift-field > .gift-shipping-street {
+    margin-bottom: 8px;
+}
+
+.gift-field .address-label {
+    margin-bottom: 3px;
+}
+
+.gift-field .address-title {
+    margin-bottom: 8px;
+}
+
+.gift-field .gift-country-warning {
+    background-color: #fdfac7;
+    padding: 5px;
+    margin-top: 5px;
+    width: 91%;
+}
+
+.gift-confirm .physical-address {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.gift-confirm .email {
+    margin-bottom: 15px;
+}
+
+.gift-confirm .address-lines {
+
+}
+
+/* ----- dialog footer ------------------------------- */
+
+.purchase-options-footer {
+    background-color: #f5f5f5;
+    border-top:1px solid #ededed;
+    padding: 16px 20px 18px;
+}
+
+.purchase-options-footer p.options-desc {
+    color: #505958;
+    margin: 0 0 6px;
+    font-size: inherit;
+}
+
+.purchase-options-footer .options-link {
+    display: block;
+}
+
+/* ----- misc ------------------------------- */
+
+.buy-dlg #download-panel-busy {
+    display: none;
+    text-align: center;
+}
+
+.buy-dlg #download-panel-busy:before {
+    content: '';
+    display: block;
+    width: 10%;
+    height: 0;
+    padding-top: 10%; /* height */
+    margin: 1em auto;
+    background: url(/img/playerbusy.svg) no-repeat 50% 50%;
+    background-size: 100% auto;
+}
+
+.no-svg .buy-dlg #download-panel-busy:before {
+    background-image: url(/img/playerbusy_transp.gif);
+}
+
+.buy-dlg #download-panel-complete {
+    display: none;
+}
+
+
+/* ------------- cart_phone.css --------------- */
+/* Shopping cart (phone view) ---------- */
+
+#sidecart .switch-messaging {
+    text-align: center;
+    margin-top: 14px;
+    line-height: 18px;
+}
+
+#sidecart .icon-cc {
+    display: inline-block;
+    text-indent: -9999px;
+}
+
+#sidecartBody {
+    background: #fff;
+}
+
+#sidecartHeader {
+    padding: 4.6875%; /* 30/640 */
+    text-align: center;
+    background: #fff;
+}
+
+#sidecartHeader > * {
+    vertical-align: middle;
+}
+
+#sidecartHeader .title {
+    color: #0687F5;
+    font-size: 1rem;
+}
+
+#sidecart.expanded #sidecartHeader {
+    background: #fff;
+}
+
+#sidecart.expanded #sidecartHeader  .title {
+    color: #888;
+}
+
+#sidecartHeader .cart-icon {
+    display: inline-block;
+    position: absolute;
+    top: auto;
+    right: 1.5rem;
+    width: 1.563rem;
+    height: 0;
+    padding-top: 1.125rem; /* height */
+    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background-size: 500% auto;
+    background-position: 0 28%;
+}
+
+.no-svg #sidecartHeader .cart-icon {
+    background-image: url(/img/mobile-sprites-20150520.png);
+}
+
+#sidecartHeader .cart-number {
+    position: absolute;
+    top: -31%;
+    left: 75%;
+    min-width: 0.75rem;
+    padding: 0 0.0625rem;
+    background: #5ac523;
+    border: 1px solid #43b214;
+    border-radius: 0.1875rem;
+    color: #fff;
+    font-size: 0.6875rem;
+    font-weight: bold;
+}
+
+#sidecart-phone-reveal {
+    display: none;
+    margin-top:-12px;
+}
+
+.has-menubar-phone #sidecart-phone-reveal {
+    padding-top: 1rem;  /* extra whitespace when using the combined navbar/cart UI */
+}
+
+#sidecartContents {
+    font-size: 0.8125rem;
+    color: #333;
+}
+
+#sidecartContents {
+    margin: 0 3.125%; /* 20/640 */
+}
+
+#sidecartContents .item {
+    padding: 0.625rem 0;
+    border-top: solid #e5e5e5 thin;
+    width:100%;
+    display:block;
+    float: left;
+    position: relative;
+}
+
+#sidecartContents .item.last {
+    border-bottom: solid #e5e5e5 thin;
+    margin-bottom:20px;
+}
+
+#sidecartContents .item a {
+    color: black;
+    display:block;
+    width:50%;
+    float:left;
+}
+
+#sidecartContents .item a.no-art {
+    width: 65%;
+}
+
+#sidecartContents .item-type {
+    float: left;
+    width: 50%;
+    display:block;
+    color: #898989;
+}
+
+#sidecartContents .item-price {
+    text-align: right;
+    position:absolute;
+    top:0%;
+    right:10%;
+}
+
+#sidecartContents .item p {
+    margin: 0;
+}
+
+#sidecartContents .cartItemContents {
+    position: relative;
+}
+
+#sidecartContents .cartItemContents > * {
+    vertical-align: top;
+}
+
+#sidecartContents .cartItemContents .thumb {
+    display: block;
+    float: left;
+    width: 15%;
+    height: 0;
+    padding-top: 15%; /* height */
+    margin: 0 2% 0 0;
+    background: no-repeat; /* image url is set in template */
+    background-size: 100% auto;
+    outline: 1px solid rgba(0,0,0,0.18);
+    outline-offset: -1px;
+    position: relative;
+}
+
+#sidecartContents .cartItemContents .thumb.package {
+    padding-top: 11.25%; /* 4:3 aspect ratio */
+    /* When a package has no art, we fall back to its associated album art (if any), which
+       uses a 1:1 aspect ratio. Clip it by centering vertically. */
+    background-position: center;
+}
+
+#sidecartContents .cartItemContents .thumb.bundle {
+    margin-left: -3.75em;
+}
+
+#sidecartContents .cartItemContents p {
+    display: inline-block;
+    width: 70%; /* to make room for thumb image and delete button */
+    margin-top: -0.1em;
+}
+
+#sidecartContents .price {
+    display: block;
+    padding-top: 0.4em;
+}
+
+#sidecartContents .item .delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 7.5%;
+    height: 0;
+    padding-top: 7.5%; /* height */
+    border: solid #e5e5e5 thin;
+    border-radius: 0.4em;
+}
+
+#sidecartContents .item .delete span {
+    display: block;
+    text-indent: -9999rem;
+    width: 50%;
+    height: 0;
+    padding-top: 50%; /* height */
+    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background-size: 500% auto;
+    background-position: 0 23.87%;
+    margin-top: -77%;
+    margin-left: 27.5%;
+    opacity: 0.55;
+}
+
+.no-svg #sidecartContents .item .delete span {
+    background-image: url(/img/mobile-sprites-20150520.png);
+}
+
+#sidecartReveal {
+    border-bottom: thin solid #ccc;
+}
+
+#sidecartFooter {
+    margin: 1rem 3.125% 0; /* 20/640 */
+    padding-bottom: 5%;
+}
+
+#sidecartFooter table#summary {
+    width: 76%;
+    margin-left: 12%;
+}
+#sidecartFooter td, #sidecartFooter th {
+    padding: 0 0.3em 0.4em 0;
+    text-align: left;
+}
+
+#sidecartFooter th {
+    padding-right: 0.3125rem;
+    font-size: 0.875rem;
+}
+#sidecartFooter td {
+    width: auto;
+    font-size: 0.875rem;
+}
+
+#sidecartFooter .numeric {
+    text-align: right;
+}
+
+#sidecartFooter .small, #sidecartFooter .currency {
+    font-size: 0.8rem;
+}
+
+#sidecartFooter .currency {
+    width:5%;
+}
+
+#sidecartFooter .total > *, #sidecartFooter .summary-notes {
+    padding-top: 0.5em;
+}
+
+#sidecartFooter .total th, #sidecartFooter .total .numeric {
+    font-weight: bold;
+}
+
+#sidecartFooter .summary-notes {
+    text-align: center;
+    font-size: 0.875rem;
+    padding-bottom: 0.5rem;
+}
+
+#sidecartFooter .summary-notes > span:not(:first-child):before {
+    content: " — "; /* emdash */
+}
+
+#sidecart a.buttonLink {
+    display: block;
+    width: 80%;
+    margin: 0.625rem auto;
+    line-height: 2.25rem;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.4em;
+    color: #fff;
+    background: #4F8E25;
+    font-size: 0.8125rem;
+}
+
+.gifticon.bc-ui-m {
+    float:left;
+    margin-right: 3px;
+    display: inline-block;
+    width: 1.3em;
+    height: 0;
+    padding-top: 1.3em; /* height */
+    background-size: 500%;
+    background-position: 0 80%;
+    vertical-align: text-bottom;
+}
+
+/* dark */
+.invertIconography #sidecartHeader {
+    background: #efefef;
+}
+
+
+/* ------------- payment_prefs.css --------------- */
+/** how to pay dialog **/
+.payment-pref-dlg {
+    width: 460px;
+    float: left;
+ }
+
+.payment-pref-dlg button.proceed {
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: 25px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+ }
+
+.payment-pref-dlg form {
+    width: 380px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    display: block;
+    float:left;
+ }
+
+ .payment-pref-dlg input {
+    width: 5%;
+    display:block;
+    float: left;
+    position: relative;
+    padding:0;
+    margin:0;
+ }
+
+.payment-pref-dlg div.selected {
+    background: #efefef;
+    border-color: rgb(126,126,126);
+}
+
+.payment-pref-dlg div {
+    display: block;
+    float: left;
+    width: 350px;
+    position: relative;
+    padding: 15px 15px 0 13px;
+    border-radius: 5px;
+    border: 1px solid #ACACAC;
+    margin-bottom: 15px;
+    height: 33px;
+}
+
+.payment-pref-dlg label {
+    width: 95%;
+    display:block;
+    float:left;
+    position:relative;
+}
+
+.payment-pref-dlg .paypal {
+    background: transparent url("/img/_sprite-bc-cc-cart@2x.png") repeat scroll -5px -101px;
+    background-size: 114px 122px;
+    width: 71px;
+    height: 20px;
+    text-indent: -9999px;
+    margin-left: 15px;
+}
+
+.payment-pref-dlg .credit-card span {
+    display: inline-block;
+    float:left;
+    margin-left: 15px;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.payment-pref-dlg .we-accept-these-cards {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    position: absolute;
+    /*transform: scale(0.7);*/
+    bottom: -15px;
+    right: -5px;
+}
+
+.we-accept-these-cards li {
+    float: left;
+    display:block;
+    position:relative;
+    padding: 0;
+    margin-left: 1px;
+}
+
+.ui-widget.nu-dialog .payment-pref-dlg input[type="radio"] {
+    top: 2px;
+}
+
+/* ------------- card_icons.css --------------- */
+
+/** card icons **/
+
+/** low-res icons **/
+.icon-cc {
+    background: url(/img/_sprite-bc-cc-cart.png);
+    width: 32px;
+    height: 20px;
+    background-position: -9px -11px;
+}
+
+.icon-cc.mastercard {
+    background-position: -85px -11px;
+}
+
+.icon-cc.jcb {
+    background-position: -161px -11px;
+}
+
+.icon-cc.amex {
+    background-position: -9px -71px;
+}
+
+.icon-cc.diners-club {
+    background-position: -85px -71px;
+}
+
+.icon-cc.discover {
+    background-position: -161px -71px;
+}
+
+/** for retina **/
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .icon-cc {
+        background-image: url(/img/_sprite-bc-cc-cart@2x.png);
+        background-size: 114px 122px;
+        width: 32px;
+        height: 20px;
+        background-position: -4px -5px;
+
+    }
+
+    .icon-cc.mastercard {
+        background-position: -42px -5px;
+    }
+
+    .icon-cc.jcb {
+        background-position: -80px -5px;
+    }
+
+    .icon-cc.amex {
+        background-position: -4px -35px;
+    }
+
+    .icon-cc.diners-club {
+        background-position: -42px -35px;
+    }
+
+    .icon-cc.discover {
+        background-position: -80px -35px;
+    }
+}
+
+
+/* ------------- payment_prefs_phone.css --------------- */
+.ui-widget.nu-dialog .payment-pref-dlg input[type="radio"] {
+    display:none;
+}
+
+.payment-pref-dlg {
+    width: 100%;
+}
+
+.payment-pref-dlg div.selected,
+.payment-pref-dlg div {
+    background: #efefef;
+    border: 1px solid rgb(193,193,193);
+    width: 96%;
+    padding: 15px 0 0 4%;
+}
+
+.payment-pref-dlg form {
+    width: 90%;
+    margin-top: 32px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.payment-pref-dlg label.credit-card {
+    width: 100%;
+}
+
+.payment-pref-dlg label.credit-card,
+.payment-pref-dlg label.paypal {
+    margin: 0;
+    padding-right: 10px;
+}
+
+.payment-pref-dlg .credit-card span {
+    margin: 0;
+}
+
+.payment-pref-dlg .we-accept-these-cards {
+    bottom: -2px;
+    right: 0px;
+    transform: scale(0.8);
+}
+
+.payment-pref-dlg button.proceed {
+    display:none;
+}
+
+
+/* ------------- change_payment_method.css --------------- */
+.change-payment-method-dlg {
+    width: 460px;
+    float:left;
+}
+
+.change-payment-method-dlg .row {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.change-payment-method-dlg .row:first-child {
+    margin-top: 40px;
+}
+
+.change-payment-method-dlg .row:last-child {
+    margin-bottom: 40px;
+}
+
+.change-payment-method-dlg .row {
+    margin: 0 50px;
+    background: #f5f5f5;
+    border: 1px solid #b9b9b9;
+    border-radius: 3px;
+    height: 48px;
+    margin-bottom: 15px;
+    color: #0687f5;
+    text-decoration: bold;
+}
+
+.row span.cc-info,
+.row span.credit-card,
+.row span.paypal {
+    display: inline-block;
+    width: 50%;
+    margin: 14px;
+    margin-left: 14px;
+    font-weight: bold;
+}
+
+.row span.cc-info {
+    width: auto;
+    float: right;
+    color: #666;
+    font-size: .9em;
+    font-weight: normal;
+}
+
+.icon-cc {
+    text-indent: -9999px;
+    display:inline-block;
+}
+
+.cc-info .saved-card {
+    font-size: 0.85em;
+    padding-left:5px;
+}
+
+/* ------------- change_payment_method_phone.css --------------- */
+.change-payment-method-dlg .row {
+    margin: 0 5% 10px;
+    width: 90%;
+}
+
+.change-payment-method-dlg {
+    width: 100%;
+}
+
+
+/* ------------- policies_phone.css --------------- */
+.policies h3 {
+    font-size: 0.9375rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.policies dt ,
+.policies dd {
+    font-size: 0.8125rem;
+}
+
+.policies dt {
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+}
+
+.policies dd {
+    margin: 0 0 1.5rem 0;
+}
+
+
+
+/* ------------- bio_phone.css --------------- */
+/* Bio photo: this image's aspect ratio can vary, but to preserve image quality, we'll bound the
+   max dimensions to a square measuring 100% of the page *width*. Landscape images are easy... */
+#bio-container .landscape .band-photo {
+    width: 100%;
+}
+
+/* ...portrait is harder! */
+#bio-container .artists-bio-pic.portrait {
+    position: relative; /* consider padding part of the element's height */
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;  /* height */
+}
+
+#bio-container .artists-bio-pic.empty {
+    display: none;
+}
+
+/* portrait, cont. */
+#bio-container .portrait .band-photo {
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+#bio-container .artists-bio-pic .bio-image-upload, #bio-container .artists-bio-pic .delete-link, #bio-container .edit-bio-text-form,
+#bio-container .artists-bio-text .bio-text-add,  #bio-container .artists-bio-text .bio-text-edit {
+    display: none;
+}
+
+#following-actions {
+    margin: 1rem 0;
+}
+
+#bio-text {
+    word-wrap: break-word;
+}
+
+#bio-container p, #band-links li {
+    margin: 0.625rem 0;
+    font-size: 0.8125rem;
+    line-height: 140%;
+}
+
+#band-links {
+    margin-top: 0.9375rem;
+}
+
+#band-links li {
+    margin: 0;
+}
+
+#recommended {
+    margin: 0.9375em 0;
+    font-size: 0.8125rem;
+}
+
+
+/* ------------- fan_tralbum_phone.css --------------- */
+/***** wishlist/unwishlist controls ***********************************/
+
+#wishlist-msg, #wishlisted-msg, #purchased-msg {
+    display: none;
+}
+#collect-item {
+    margin-top: 1.5em;
+    padding: 1em 0 0;
+}
+/* add top border if it follows two or more .buyItem */
+.buyItem+.buyItem+#collect-item {
+    border-top: 1px solid #cccccc;
+}
+.invertIconography .buyItem+.buyItem+#collect-item {
+    border-top: solid rgba(255,255,255,0.2) thin;
+}
+#collect-item.wishlist #wishlist-msg {
+    display: block;
+}
+#collect-item.wishlisted #wishlisted-msg {
+    display: block;
+}
+#collect-item.purchased #purchased-msg {
+    display: block;
+}
+#wishlist-alert {
+    display: none;
+    color: red;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 4px;
+}
+
+#wishlisted-msg {
+    position: relative;  /* positioning context for split button, below */
+}
+
+#wishlisted-msg .view {  /* split button */
+    position: absolute;
+    right: 0;
+    padding: 0 0.8em;
+    border-left: solid thin rgba(0,0,0,0.2);
+    font-weight: normal;
+}
+
+.invertIconography #wishlisted-msg .view {
+    border-left-color: rgba(255,255,255,0.1);
+}
+
+#wishlisted-msg .view:after {
+    content: ' >';
+}
+
+.collect-item-icon {
+    /* sprite h/w ratio: 1/1 */
+    content: '';
+    display: inline-block;
+    width: 1.3em;
+    height: 0;
+    padding-top: 1.3em; /* height */
+    margin-right: 0.3rem;
+    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background-size: 500% auto;
+    background-position: 0 48%;
+    vertical-align: text-bottom;
+}
+.no-svg .collect-item-icon {
+    background-image: url(/img/mobile-sprites-20150520.png);
+}
+.invertIconography .collect-item-icon {
+    background-position: 25% 48%; /* 25% == dark */
+}
+
+#wishlisted-msg .collect-item-icon {
+    background-position: 0 52%;
+}
+.invertIconography #wishlisted-msg .collect-item-icon {
+    background-position: 25% 52%; /* 25% == dark */
+}
+
+#purchased-msg .collect-item-icon {
+    background-position: 0 56%;
+}
+.invertIconography #purchased-msg .collect-item-icon {
+    background-position: 25% 56%; /* 25% == dark */
+}
+
+/***** follow/unfollow button ***********************************/
+
+.compound-button.follow-unfollow.following {
+    color: white;
+    border: solid 1px #3d7c8f;
+    background-color: #408294;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%,rgba(51, 104, 126, 0.8)), color-stop(0%,rgba(0, 0, 0, 0)));  /* old webkit syntax; here for Android */
+    background-image: -webkit-linear-gradient(bottom, rgba(51, 104, 126, 0.8), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(bottom, rgba(51, 104, 126, 0.8), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(bottom, rgba(51, 104, 126, 0.8) 0%,rgba(0, 0, 0, 0) 100%);
+    background-image: linear-gradient(to bottom, rgba(51, 104, 126, 0.8), rgba(0, 0, 0, 0));
+}
+
+.invertIconography .compound-button.follow-unfollow.following {
+    color: rgb(190,190,190);
+    border: solid 1px #346b7b;
+    background-color: #2d5c69;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%,rgba(51, 104, 126, 0.5)), color-stop(0%,rgba(0, 0, 0, 0)));  /* old webkit syntax; here for Android */
+    background-image: -webkit-linear-gradient(bottom, rgba(51, 104, 126, 0.5), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(bottom, rgba(51, 104, 126, 0.5), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(bottom, rgba(51, 104, 126, 0.5) 0%,rgba(0, 0, 0, 0) 100%);
+    background-image: linear-gradient(to bottom, rgba(51, 104, 126, 0.5), rgba(0, 0, 0, 0));
+}
+
+/** First Band Follow Dialog **/
+.nu-dialog {
+    margin: auto;
+    width:96% !important;
+}
+.band-first-follow-message {
+    border-bottom: 1px solid #ededed;
+    color: #2e3332;
+    margin: 0 0 -.7em;
+    padding: 0 0 1.7em;
+}
+.band-first-follow-message .fan-email {
+    color:#777;
+    white-space: nowrap;
+}
+.band-first-follow-message .fan-email:empty:after {
+    content:'example-email@website.com';
+}
+.band-first-follow-image {
+    display: none;
+}
+
+/* playback limits dialog */
+.play-limits-dialog {
+}
+.play-limits-dialog-header {
+    text-align: center;
+    margin: 0 0 8px;
+}
+#play-limits-dialog-fan-img,
+#play-limits-dialog-band-img {
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 78px;
+    box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.1);
+    display: inline-block;
+    height: 78px;
+    left: inherit;
+    opacity: 1.0;
+    overflow: hidden;
+    position: relative;
+    right: inherit;
+    width: 78px;
+    text-align: center;
+}
+.play-limits-dialog-heart {
+    display: inline-block;
+    width: 72px;
+    height: 70px;
+    overflow: visible;
+    vertical-align: bottom;
+}
+#play-limits-dialog-heart-img,
+#play-limits-dialog-heartbreak-img {
+    height: 189px;
+    margin-left: -14px;
+    width: 100px;
+}
+#play-limits-dialog-heartbreak-img {
+    display: none;
+}
+.play-limits-dialog > h2 {
+    color: #2e3332;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    margin: 0 auto 14px;
+    opacity: 1.0;
+    text-align: center;
+    width: inherit;
+}
+.play-limits-dialog-pkg-art,
+.play-limits-dialog-pkg-art .pkg-image,
+.no-pkg-art .play-limits-dialog-pkg-art {
+    display: none;
+}
+.play-limits-dialog-perks {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    opacity: 1.0;
+    padding: 10px 0 8px;
+}
+.play-limits-dialog-bullets {
+    display: inline-block;
+    vertical-align: top;
+    width: inherit;
+}
+.play-limits-dialog-bullets-title {
+    font-size: 15px;
+    font-weight: 200;
+    display: block;
+}
+.play-limits-dialog-bullets ul {
+    padding: 0;
+}
+.play-limits-dialog-bullets li {
+    list-style-type: disc;
+    list-style-position: outside;
+    color: #619aa9;
+    font-size: 12px;
+    margin: 7px 0 7px 18px;
+}
+.play-limits-dialog-bullets li span {
+    color: #2e3332;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.play-limits-dialog-bullets .band-name {
+    display: inline-block;
+}
+.play-limits-dialog-button-pane {
+    display: block;
+    font-size: 0;
+    margin: 18px 0 0;
+    opacity: 1.0;
+}
+.ui-dialog.nu-dialog .play-limits-dialog-button-pane button {
+    font-size: 14px;
+    height: 40px;
+    width: 48%;
+    display: inline-block;
+    margin: 0 4% 18px 0;
+}
+.ui-dialog.nu-dialog .play-limits-dialog-button-pane button:last-child {
+    margin-right:0;
+}
+
+.play-limits-dialog-footer {
+    text-align: center;
+    color: #686868;
+}
+.ui-dialog.nu-dialog .ui-dialog-content {
+    padding: 18px 20px;
+}
+
+
+
+/* ------------- peekaboo_text.css --------------- */
+/* The more/less link is hidden by default */
+.peekaboo-link {
+    display: none;
+}
+
+/* For browsers which don't support CSSOM and truncate.js, enable the fallback (PeekabooText) */
+.no-cssom .peekaboo-link {
+    display: inline;
+}
+.no-cssom .peekaboo-text {
+    display: none;
+}
+
+
+
+/* ------------- band_selector_phone.css --------------- */
+.label-band-selector {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    margin-bottom: 6%;
+}
+.label-band-selector select {
+    font-size: 0.75rem;
+    width: 75%;
+}
+
+
+
+/* ------------- video_phone.css --------------- */
+    .featured-video-wrapper {
+        height: 0;
+        padding:0 0 56.25%; /* preserve 16:9 aspect ratio */
+        padding-bottom: -webkit-calc(56.25% - 10px); /* use calc() to compensate for l/r margins */
+        margin: 15px 10px 5px;
+        position: relative;
+        background-color: black;
+    }
+
+    .featured-video-wrapper iframe.video-generic-iframe {
+        display:none;
+    }
+
+    .featured-video-wrapper video {
+        width: 100%;
+        height: 100%;
+        top:0px;
+        left:0px;
+        position: absolute;
+    }
+
+    div.video-wrapper {
+        display:none;
+    }
+
+    /*
+    ** the ios safari player: take the video tag out of the dom
+    ** -- keeps the screen from jummping when we instantiate.
+    */
+    tr.track_row_view video#mobile-player, div.track_info video#mobile-player {
+        position:absolute;
+        width: 1px;
+        height:1px;
+        overflow: hidden;
+    }
+
+    div.track_info video#mobile-player{
+        top:    -10px;
+        left:   0px;
+        z-index: -1;
+    }
+
+    video.hidden-video-mobile-player {
+        width: 100%;
+        display: none;
+    }
+
+    span.mobile-player-wait {
+        padding: 8px 8px 7px 20px;
+        z-index: 5;
+        background-image: url(/img/playerbusy_transp.gif);
+        position: absolute;
+    }
+
+    .video-list .video-mobile-player{
+        width:100%;
+    }
+
+    .featured-video-wrapper-caption {
+        margin:0 10px 1em;
+        text-align: center;
+        font-size:.75em;
+    }
+
+    a.video-link-loading {
+        color:gray !important;
+        cursor: wait;
+    }
+
+    dl.video-list dd.video-caption {
+        color: #505958;
+        font-size:90%;
+        display:block;
+        margin: 0;
+        padding-left: 0px;
+        text-align: left;
+    }
+
+    dl.video-list p {
+        margin:1em 0 2em;
+    }
+
+    dl.video-list dd.video-caption p.caption-proper {
+        font-size:12px;
+        margin: 8px 0;
+    }
+
+    dl.video-list .tralbum-art{
+        min-width: 64px;
+        min-height: 64px;
+        max-width: 64px;
+        float: left;
+        background-color: rgba(255,255,255,0.5);
+    }
+
+    dl.video-list .tralbum-art img{
+        width:64px;
+        height:64px;
+    }
+
+    dl.video-list .bc-ui2 {
+        background: url('/img/_sprite-bc-ui2-20130524.png') no-repeat;
+        height: 13px;
+        height: 10px;
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        margin: 0 4px 2px 0;
+        padding: 4px 0 0 0;
+    }
+
+    dl.video-list .collect-item-icon {
+        background-position: 0px -73px;
+    }
+
+    dl.video-list .sub-vid-action-link {
+        font-weight: bold;
+        margin-right:12px;
+    }
+    dl.video-list p > .sub-vid-action-link:last-child {
+        margin:0;
+    }
+
+    dl.video-list .tralbum-art.empty {
+        outline: 1px solid rgba(0,0,0,0.1);
+        outline-offset: -1px;
+    }
+
+    dl.video-list .video-associated-tralbum-info {
+        margin-left: 75px;
+    }
+
+    /* hide play counts on mobile */
+    .video-caption > .playcount {
+        display:none !important;
+    }
+
+
+
+
+
+
+
+
+/* ------------- artistsub_tralbum_phone.css --------------- */
+.buyItem .subscriber-only-buy-link {
+    display: none;
+}
+
+.buyItem .subscriber-only-buy-link.subscriber-view {
+    display: inline-block;
+}
