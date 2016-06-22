@@ -1,0 +1,19 @@
+body {
+    font: 13px/1.231 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	margin: 0;
+}
+
+li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+a, .pseudoLink, button {
+    color: #0687f5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bc-ui {
+    background: url("_sprite-bc-ui-20150529.png");
+}

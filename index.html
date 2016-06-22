@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>ZULUZULUU</title>
+	<link rel="stylesheet" href="main.css" type="text/css">
+	<link rel="stylesheet" href="menubar.css" type="text/css">
+	<link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+<body>
+	<div id="menubar-wrapper">
+		<div id="menubar-vm">
+			<div id="menubar" class="menubar out">
+				<ul id="site-nav" class="menubar-section horizontal">
+
+					<li class="menubar-item bclogo"><a href="https://bandcamp.com"><div class="bc-ui logo"></div></a></li>
+					<li class="menubar-item extended"><a href="http://bandcamp.com/?from=fanbar#discover">discover</a></li>
+					<li class="search extended">
+						<!-- search -->
+						<form id="search" action="/search" method="get" data-bind="submit: search.validate">
+							<input id="search-field" type="text" title="" tabindex="1" autocomplete="off" maxlength="2048" name="q" placeholder="search bandcamp..." data-bind="value: search.inputField"><button tabindex="2" type="submit" title="search">
+								<span class="bc-ui menubar-search-icon">&nbsp;</span>&nbsp;</button>&nbsp;
+								<input type="hidden" name="from" value="fanbar">
+							</form>
+						</li>
+
+					</ul>
+
+					<ul id="user-nav" class="menubar-section horizontal">
+
+						<li id="feed-main" class="menubar-item ">
+							<a href="https://bandcamp.com/jclaw/feed">
+								<span>feed</span>
+							</a>
+						</li>
+
+						<li id="collection-main" class="menubar-item ">
+							<a href="https://bandcamp.com/jclaw">
+								<span>collection</span>
+
+							</a>
+						</li>
+
+						<li class="menubar-item ">
+							<a class="gear-dropdown-toggle">
+								<div>
+									<div class="bc-ui gear " data-bind="css: {admin: isAdmin()}"></div>
+									<span class="bc-ui menucaret"></span>
+								</div>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+	</html>

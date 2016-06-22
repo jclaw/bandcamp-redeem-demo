@@ -1,0 +1,166 @@
+#menubar-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 43px;
+    border-top: solid 5px #848484;
+    background-color: #ddd;
+    background-position: 0 42px;
+    background-repeat: repeat-x;
+    z-index: 1;
+}
+
+#menubar-vm {
+    height: 48px;
+    top: -5px;
+    position: absolute;
+    width: 100%;
+}
+
+.menubar {
+    position: relative;
+    height: 48px;
+    width: 975px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+.menubar {
+    position: static;
+    text-align: right;
+}
+
+.menubar * {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.menubar ul.horizontal {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    white-space: nowrap;
+}
+
+.menubar > ul > li {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.menubar > ul > li > :first-child {
+    display: block;
+    height: 43px;
+    line-height: 43px;
+    padding: 0 11px;
+    border-top: solid 5px #848484;
+    transition: background 0.1s ease-out;
+    -webkit-transition: background 0.1s ease-out;
+    -moz-transition: background 0.1s ease-out;
+}
+
+.menubar a {
+    color: #408294;
+    cursor: pointer;
+}
+
+#site-nav {
+    /* position: absolute; */
+    left: 0;
+}
+
+ul#user-nav {
+    display: inline-block;
+    position: static;
+    right: auto;
+}
+
+@media (min-width: 1075px)
+.menubar-item.bclogo {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@media (min-width: 1075px)
+.out .menubar-item.bclogo {
+    position: static;
+}
+
+ul#site-nav > li, ul#user-nav > li {
+    text-align: left;
+}
+
+.menubar .gear.bc-ui {
+    background-position: -18px -181px;
+    width: 16px;
+    height: 16px;
+    margin: 13px 0 0;
+    float: left;
+}
+
+.menubar > ul > li .logo {
+    background-position: 0 -100px;
+    width: 32px;
+    height: 11px;
+    margin-top: 16px;
+}
+
+.menubar .menucaret {
+    display: inline-block;
+    width: 9px;
+    height: 6px;
+    overflow: hidden;
+    margin: 20px 0 0 7px;
+    background-position: 0 -1px;
+    float: left;
+}
+
+.menubar .search {
+    float: left;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.menubar input#search-field {
+    margin: 0;
+    height: 21px;
+    line-height: 21px;
+    width: 200px;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    color: #333;
+    font-size: 13px;
+    padding: 0 25px 0 3px;
+    -webkit-user-select: text;
+}
+
+.menubar #search button {
+    margin: 0;
+    padding: 0;
+    height: 28px;
+    line-height: 22px;
+    border: 6px solid transparent;
+    font-size: 10px;
+    width: 28px;
+    overflow: hidden;
+    position: relative;
+    left: -31px;
+    top: 2px;
+    background-color: transparent;
+}
+
+.menubar #search button .bc-ui.menubar-search-icon {
+    background-position: 0 -200px;
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    text-indent: -999rem;
+}
