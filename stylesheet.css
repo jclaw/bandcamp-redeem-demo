@@ -4,6 +4,11 @@
 	margin-top: 20px;
 }
 
+
+#menubar-wrapper {
+	display: none;
+}
+
 .de-emphasized {
 	color: #818285;
 }
@@ -31,10 +36,6 @@
 	margin-bottom: 40px;
 }
 
-.field-row {
-	/*padding-bottom: 20px;*/
-}
-
 tr.spacer {
 	height: 10px;
 }
@@ -60,15 +61,16 @@ label.field-block {
 	padding: 5px;
 }
 
-.collection_add {
+.collection-add {
+	display: none;
 	text-align: left;
 	margin-left: 5px;
 	margin-top: .5em;
 }
-.collection_add input {
+.collection-add input {
 	margin-right: .5em;
 }
-.collection_add_text {
+.collection-add-text {
 	/*font-size: 1.1em;*/
 }
 
@@ -77,7 +79,7 @@ label.field-block {
 	margin-bottom: 2em;
 }
 
-.redeem_button {
+.redeem-button {
 	font-size: 110%;
 	color: white;
 	font-weight: 500;
@@ -88,7 +90,7 @@ label.field-block {
 	width: 100%;
 	padding: 6px 0;
 }
-.redeem_button:disabled {
+.redeem-button:disabled {
 	color: gray;
 	border-color: gray;
 	text-decoration: none;
@@ -110,4 +112,29 @@ label.field-block {
 	text-align: center;
 	color: #818285;
 	font-size: 86%;
+}
+
+
+.loggedin #menubar-wrapper {
+	display: inherit;
+}
+
+.loggedin .email-field {
+	display: none;
+}
+
+.loggedin .small-message {
+	display: none;
+}
+
+.loggedin .collection-add {
+	display: initial;
+}
+
+.loggedin .code-table tr td:nth-child(1) {
+	display: none;
+}
+
+.loggedin .code-table {
+	margin: 0 auto;
 }
