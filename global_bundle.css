@@ -4170,7 +4170,7 @@ ul#user-nav > li {
     display: block;
 }
 .menubar-phone .logo-container .logo {
-    background: url('/img/bandcamp-logo-bc-color.svg') 60% 48% no-repeat;
+    background: url('img/bandcamp-logo-bc-color.svg') 60% 48% no-repeat;
     background-size: 54%;
     background-repeat: no-repeat;
     height: 4em;

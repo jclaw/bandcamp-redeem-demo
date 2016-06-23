@@ -21,7 +21,7 @@
 }
 
 .nu-dialog .ui-icon {
-    background:url(/img/_sprite-bc-ui-20150529.png);
+    background:url(img/_sprite-bc-ui-20150529.png);
 }
 
 .ui-dialog .ui-widget-header {
@@ -783,7 +783,7 @@ div#customHeader {
 /***** Common Widget Graphics ********************/
 
 .bc-ui {
-    background:url(/img/_sprite-bc-ui-20150529.png);
+    background:url(img/_sprite-bc-ui-20150529.png);
 }
 
 /* -m is for mobile */
@@ -921,7 +921,7 @@ div#customHeader {
     height: 0;
     padding-top: 4.69%; /* height */
     padding-left: 30%;  /* width */
-    background: url(/img/logo-white.svg) no-repeat;
+    background: url(img/logo-white.svg) no-repeat;
     background-size: 100% auto;
     background-position: left center;
 }
@@ -1334,7 +1334,7 @@ body.nouveau-masked {
 }
 
 .menubar > ul > li .logo {
-    background: url('/img/bandcamp-logo-bc-color.svg') 30% 50% no-repeat;
+    background: url('img/bandcamp-logo-bc-color.svg') 30% 50% no-repeat;
     background-size: 100%;
     width: 45px;
     height: 45px;

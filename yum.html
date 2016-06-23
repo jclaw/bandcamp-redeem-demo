@@ -59,6 +59,29 @@
 					</li>
 
 				</ul>
+				<ul id="user-mobile-nav" class="menubar-section horizontal">
+					<span class="menubar-divider"></span>
+					<li id="account-main" class="menubar-item ">
+						<a href="javascript:;">
+							<span>jclaw</span>
+						</a>
+					</li>
+				</ul>
+				<ul id="loggedout-nav" class="menubar-section horizontal">
+					<span class="menubar-divider"></span>
+					<li id="login-main" class="menubar-item ">
+						<a href="">
+							<span>log in</span>
+						</a>
+					</li>
+					<span class="menubar-divider"></span>
+					<li id="signup-main" class="menubar-item">
+						<a href="">
+							<span>sign up</span>
+						</a>
+					</li>
+
+				</ul>
 			</div>
 
 		</div>
@@ -119,6 +142,10 @@
 									</label>
 								</div>
 
+								<div id="login-link-mobile" class="small-message">
+									Already have an account? <a href="javascript:;">Log in.</a>
+								</div>
+
 								<div id="buttons">
 									<button class="redeem-button" type="submit" name="redeem" value="Redeem">
 										<div>Redeem</div>
@@ -126,50 +153,12 @@
 								</div>
 
 								<div id="forlesswhitespace"></div>
-								<div class="small-message">
-									Already have an account? <a href="javascript:;" id="log-in">Log in.</a>
+								<div id="login-link-desktop" class="small-message">
+									Already have an account? <a href="javascript:;">Log in.</a>
 								</div>
 							</div>
 						</div>
 					</form>
-					<!-- <form id="code-form">
-						<table class="code-table">
-							<tr>
-								<td></td>
-								<td><h2 class="form-header">Please enter your code:</h2></td>
-							</tr>
-							<tr class="field-row code-block">
-								<td><label for="code-input">Code</label></td>
-								<td><input id="code-input" class="textinput" type="text" tabindex="1" name="code" value="" placeholder="e.g. lanz-gh9h" required></td>
-							</tr>
-							<tr class="spacer"></tr>
-							<tr class="field-row email-block">
-								<td><label for="email-input">Email <span class="de-emphasized">(optional)</span></label></td>
-								<td><input id="email-input" class="textinput" type="text" tabindex="2" name="email" value="" placeholder="join the artist's mailing list"></td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>
-									<div class="collection-add">
-										<label class="collection-add-text">
-											<input id="collection-add" name="collection-add" type="checkbox" value="1" checked="">Add this item to my collection
-										</label>
-									</div>
-
-									<div id="buttons">
-										<button class="redeem-button" type="submit" name="redeem" value="Redeem">
-											<div>Redeem</div>
-										</button>
-									</div>
-
-									<div id="forlesswhitespace"></div>
-									<div class="small-message">
-										Already have an account? <a href="javascript:;" id="log-in">Log in.</a>
-									</div>
-								</td>
-							</tr>
-						</table>
-					</form> -->
 
 				</div>
 
@@ -213,7 +202,61 @@
 					<span class="static-content">&nbsp;</span>
 
 				</div>
+				<ul class="pgft-phone" style="display: none">
+					<li class="navgroup">
+						<ul class="horizontal-list">
 
+							<li id="login">
+								<a href="https://bandcamp.com/login">log in</a>
+							</li>
+
+							<li>
+								<a href="https://bandcamp.com/about">about</a>
+							</li>
+							<li class="contact">
+								<a href="https://bandcamp.com/help_contact">contact / help</a>
+							</li>
+
+						</ul>
+					</li>
+					<li class="navgroup">
+						<ul class="horizontal-list">
+							<li>
+								<a href="https://bandcamp.com/fair_trade_music_policy">fair trade music policy</a>
+							</li>
+						</ul>
+					</li>
+					<li class="navgroup">
+						<ul class="horizontal-list">
+							<li>
+								<a href="https://bandcamp.com/terms_of_use">terms of use</a>
+							</li>
+							<li>
+								<a href="https://bandcamp.com/privacy">privacy</a>
+							</li>
+							<li>
+								<a href="https://bandcamp.com/copyright">copyright policy</a>
+							</li>
+						</ul>
+					</li>
+					<li class="navgroup">
+						<ul class="horizontal-list">
+							<li id="footer-logo">
+								<a href="https://bandcamp.com?from=logo"><span class="hidden-access">Bandcamp</span></a>
+							</li>
+							<li>
+								<a class="view-switcher phone">switch to desktop view</a>
+							</li>
+						</ul>
+					</li>
+					<li class="navgroup footer-extras hidden">
+						<ul class="horizontal-list">
+							<li>
+								<span id="webapp-selector-ui" class="webapp-selector-ui" style="display:none" data-webapps="[{&quot;appNumbers&quot;:[1,7],&quot;hostnameRange&quot;:[1,12],&quot;hostnameBase&quot;:&quot;bender&quot;}]"></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 		</div>
 

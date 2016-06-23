@@ -5,8 +5,13 @@
 }
 
 
-#menubar-wrapper {
+#menubar-wrapper, #user-nav, #user-mobile-nav, #login-link-mobile {
 	display: none;
+}
+
+#loggedout-nav, #user-mobile-nav {
+	position: absolute;
+	right: 0;
 }
 
 .de-emphasized {
@@ -87,8 +92,6 @@
 .collection-add input {
 	margin-right: .5em;
 }
-.collection-add-text {
-}
 
 #buttons {
 	margin-top: 1.5em;
@@ -136,6 +139,14 @@
 	display: inherit;
 }
 
+.loggedin #loggedout-nav {
+	display: none;
+}
+
+.loggedin #user-nav {
+	display: inherit;
+}
+
 .loggedin #email {
 	display: none;
 }
@@ -145,7 +156,7 @@
 }
 
 .loggedin .small-message {
-	display: none;
+	display: none !important;
 }
 
 .loggedin .collection-add {
@@ -155,6 +166,8 @@
 .loggedin .redeem-button {
 	margin-top: -6px;
 }
+
+
 
 @media (max-width: 740px) {
 	body {
@@ -168,6 +181,28 @@
 		display: inherit;
 	}
 
+	#pgFt a {
+		color: white;
+	}
+
+	#menubar-wrapper {
+		display: inherit;
+		background: #DDDDDD;
+	}
+
+	#menubar-wrapper .menubar-divider {
+		height: 100%;
+		width: 1px;
+		position: absolute;
+		border-left: 1px solid #F1F1F1;
+		border-right: 1px solid #C6C6C6;
+	}
+
+	#menubar-wrapper .menubar-item {
+		padding-left: 11px;
+		padding-right: 11px;
+	}
+
 	#propOpenWrapper {
 		background: none;
 	}
@@ -178,6 +213,14 @@
 
 	#pgBd > .content {
 		margin: 20px;
+	}
+
+	.form-header {
+		margin-top: 28px;
+		margin-bottom: 10px;
+		font-weight: 500;
+		color: #818285;
+		font-size: 18px;
 	}
 
 	.form-block {
@@ -211,10 +254,37 @@
 		margin-left: 0;
 	}
 
+	#login-link-mobile {
+		display: inherit;
+		margin-left: 50px;
+		margin-top: 28px;
+	}
+
+	#login-link-desktop {
+		display: none;
+	}
+
+	.buttons {
+		margin-top: 28px;
+	}
+
 	.redeem-button {
 		border-radius: 4px;
 	}
+
+	.loggedin #user-mobile-nav {
+		display: inherit;
+	}
+
+	.loggedin #user-nav {
+		display: none;
+	}
+
+	.loggedin .collection-add {
+		display: none;
+	}
 }
+
 @media (min-width: 741px) {
 	.pgft-desktop {
 		display: inherit;

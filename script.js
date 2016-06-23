@@ -49,11 +49,15 @@ $(document).ready(function() {
 	})
 
 
-	$('#log-in').click(function() {
+	$('.small-message a').click(function() {
 		login();
 	})
 
 	$('.bc-ui.gear').click(function() {
+		logout();
+	})
+
+	$('#account-main a').click(function() {
 		logout();
 	})
 
