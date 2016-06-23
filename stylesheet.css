@@ -16,13 +16,15 @@
 
 .form-header {
 	text-align: center;
-	margin-bottom: 40px;
+	margin-top: 118px;
+	margin-bottom: 20px;
+	font-weight: 400;
 }
 
 
 .form-block {
-	margin-top: 14px;
-	margin-bottom: 6px;
+	margin-top: 18px;
+	margin-bottom: 10px;
 }
 
 .form-block label {
@@ -31,6 +33,7 @@
 	text-align: right;
 	margin-top: 6px;
 	margin-left: -20px;
+	font-size: 105%;
 }
 
 .form-field {
@@ -40,9 +43,36 @@
 .textinput {
 	text-align: left;
 	font-size: 100%;
-	padding: 5px;
-	width: 97%;
+	padding: 7px 7px;
+	width: 94%;
 }
+
+.textinput::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: 818285;
+	opacity: 0.5;
+	font-weight: 500;
+}
+.textinput:-moz-placeholder { /* Firefox 18- */
+	color: 818285;
+    opacity: 0.5;
+	font-weight: 500;
+}
+.textinput::-moz-placeholder { /* Firefox 19+ */
+	color: 818285;
+    opacity: 0.5;
+	font-weight: 500;
+}
+.textinput:-ms-input-placeholder { /* IE 10+ */
+	color: 818285;
+    opacity: 0.5;
+	font-weight: 500;
+}
+.textinput::placeholder {
+	color: 818285;
+	opacity: 0.5;
+	font-weight: 500;
+}
+
 
 .collection-add {
 	display: none;
@@ -64,11 +94,12 @@
 .redeem-button {
 	font-size: 110%;
 	color: white;
-	font-weight: 500;
+	font-weight: 400;
 	margin: 0;
+	margin-top: 10px;
 	background: #1DA0C3;
 	border: none;
-	padding: 6px 0;
+	padding: 8px 0;
 	width: 100%;
 }
 .redeem-button:disabled {
@@ -81,18 +112,19 @@
 	color: red;
 }
 
-#forlesswhitespace {
-	padding: 25px;
-}
-
 #warning {
 	display: none;
 }
 
 .small-message {
+	margin-top: 67px;
 	text-align: center;
 	color: #818285;
-	font-size: 86%;
+	font-size: 12px;
+}
+
+.small-message a {
+	color: #1DA0C3;
 }
 
 
@@ -114,6 +146,10 @@
 
 .loggedin .collection-add {
 	display: initial;
+}
+
+.loggedin .redeem-button {
+	margin-top: -6px;
 }
 
 @media (max-width: 740px) {
