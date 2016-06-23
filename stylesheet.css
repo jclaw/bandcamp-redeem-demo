@@ -1,34 +1,46 @@
 .content {
 	/*text-align: center;*/
 	font-size: 110%;
+	margin-top: 20px;
 }
 
 .de-emphasized {
 	color: #818285;
 }
 
+.code-table {
+	margin-left: 196px;
+}
+
+.code-table td {
+	border: none;
+	/*padding: 0;*/
+}
+
+.code-table tr td:nth-child(1) {
+	vertical-align: middle;
+	text-align: right;
+}
+
+.code-table tr td:nth-child(2) {
+	width: 300px;
+}
+
 .form-header {
+	text-align: center;
 	margin-bottom: 40px;
 }
 
-.label-column {
-	float: left;
-	margin-left: 146px;
-	display: inline-block;
-	width: 140px;
-	text-align: right;
-	margin-right: 14px;
-	height: 100%;
+.field-row {
+	/*padding-bottom: 20px;*/
 }
 
-.center-column {
-	float: left;
-	text-align: center;
-	display: inline-block;
-	/*margin-left: -100px;*/
+tr.spacer {
+	height: 10px;
 }
 
-.field-block {
+
+/*.field-block {
 	display: block;
 	margin-bottom: 20px;
 	padding: 5px;
@@ -36,41 +48,17 @@
 
 label.field-block {
 	padding: 7px;
-}
+}*/
 
 .textinput {
-	display: block;
-	margin-bottom: 20px;
+	/*display: block;*/
+	/*margin-bottom: 20px;*/
 	text-align: left;
 	font-size: 100%;
-	width: 286px;
+	/*width: 286px;*/
+	width: 96%;
 	padding: 5px;
 }
-
-
-
-/*
-.fields {
-	margin-left: -110px;
-}
-
-.form-block {
-	margin-bottom: 20px;
-}
-
-.form-block label {
-	display: inline-block;
-	width: 100px;
-	text-align: right;
-	margin-right: 14px;
-}
-
-.form-block input {
-	text-align: left;
-	font-size: 100%;
-	width: 20em;
-	padding: 5px;
-}*/
 
 .collection_add {
 	text-align: left;
@@ -96,7 +84,8 @@ label.field-block {
 	margin: 0;
 	background: #1DA0C3;
 	border: none;
-	width: 300px;
+	/*width: 300px;*/
+	width: 100%;
 	padding: 6px 0;
 }
 .redeem_button:disabled {
@@ -118,6 +107,7 @@ label.field-block {
 }
 
 .small-message {
+	text-align: center;
 	color: #818285;
 	font-size: 86%;
 }
