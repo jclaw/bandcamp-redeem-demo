@@ -26,11 +26,11 @@ $(document).ready(function() {
 		{
 			selector: '#code label',
 			desktop: 'Code',
-			mobile: 'code'
+			mobile: 'code:'
 		}, {
 			selector: '#email label',
 			desktop: 'Email <span class="de-emphasized">(optional)</span>',
-			mobile: 'email'
+			mobile: 'email:'
 		}, {
 			selector: '#email .form-field .textinput',
 			desktop: "join the artist's mailing list",
