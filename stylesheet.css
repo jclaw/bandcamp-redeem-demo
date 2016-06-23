@@ -13,49 +13,35 @@
 	color: #818285;
 }
 
-.code-table {
-	margin-left: 196px;
-}
-
-.code-table td {
-	border: none;
-	/*padding: 0;*/
-}
-
-.code-table tr td:nth-child(1) {
-	vertical-align: middle;
-	text-align: right;
-}
-
-.code-table tr td:nth-child(2) {
-	width: 300px;
-}
 
 .form-header {
 	text-align: center;
 	margin-bottom: 40px;
 }
 
-tr.spacer {
-	height: 10px;
+
+.form-block {
+	margin-top: 14px;
+	margin-bottom: 6px;
 }
 
-
-/*.field-block {
+.form-block label {
 	display: block;
-	margin-bottom: 20px;
-	padding: 5px;
+	position: absolute;
+	text-align: right;
+	margin-top: 6px;
+	margin-left: -20px;
 }
 
-label.field-block {
-	padding: 7px;
-}*/
+.form-field {
+	display: inline-block;
+}
 
 .textinput {
 	text-align: left;
 	font-size: 100%;
-	width: 96%;
 	padding: 5px;
+	width: 97%;
 }
 
 .collection-add {
@@ -82,8 +68,8 @@ label.field-block {
 	margin: 0;
 	background: #1DA0C3;
 	border: none;
-	width: 100%;
 	padding: 6px 0;
+	width: 100%;
 }
 .redeem-button:disabled {
 	color: gray;
@@ -114,7 +100,11 @@ label.field-block {
 	display: inherit;
 }
 
-.loggedin .email-field {
+.loggedin #email {
+	display: none;
+}
+
+.loggedin .form-block label {
 	display: none;
 }
 
@@ -124,12 +114,4 @@ label.field-block {
 
 .loggedin .collection-add {
 	display: initial;
-}
-
-.loggedin .code-table tr td:nth-child(1) {
-	display: none;
-}
-
-.loggedin .code-table {
-	margin: 0 auto;
 }

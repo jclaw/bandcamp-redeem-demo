@@ -95,18 +95,55 @@
 
 
 				<div class="content">
-					<form id="code-form">
+					<form id="redeem-form">
+						<div class="row">
+							<h2 class="form-header col-16-16">Please enter your code:</h2>
+						</div>
+						<div id="code" class="row form-block">
+							<label class="col-4-16" for="code-input">Code</label>
+							<div class="col-8-16 offset-4-16 form-field">
+								<input id="code-input" class="textinput" type="text" tabindex="1" name="code" value="" placeholder="e.g. lanz-gh9h" required>
+							</div>
+						</div>
+						<div id="email" class="row form-block">
+							<label class="col-4-16" for="email-input">Email <span class="de-emphasized">(optional)</span></label>
+							<div class="col-8-16 offset-4-16 form-field">
+								<input id="email-input" class="textinput" type="text" tabindex="2" name="email" value="" placeholder="join the artist's mailing list">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-8-16 offset-4-16">
+								<div class="collection-add">
+									<label class="collection-add-text">
+										<input id="collection-add" name="collection-add" type="checkbox" value="1" checked="">Add this item to my collection
+									</label>
+								</div>
+
+								<div id="buttons">
+									<button class="redeem-button" type="submit" name="redeem" value="Redeem">
+										<div>Redeem</div>
+									</button>
+								</div>
+
+								<div id="forlesswhitespace"></div>
+								<div class="small-message">
+									Already have an account? <a href="javascript:;" id="log-in">Log in.</a>
+								</div>
+							</div>
+						</div>
+					</form>
+					<!-- <form id="code-form">
 						<table class="code-table">
 							<tr>
 								<td></td>
 								<td><h2 class="form-header">Please enter your code:</h2></td>
 							</tr>
-							<tr class="field-row code-field">
+							<tr class="field-row code-block">
 								<td><label for="code-input">Code</label></td>
 								<td><input id="code-input" class="textinput" type="text" tabindex="1" name="code" value="" placeholder="e.g. lanz-gh9h" required></td>
 							</tr>
 							<tr class="spacer"></tr>
-							<tr class="field-row email-field">
+							<tr class="field-row email-block">
 								<td><label for="email-input">Email <span class="de-emphasized">(optional)</span></label></td>
 								<td><input id="email-input" class="textinput" type="text" tabindex="2" name="email" value="" placeholder="join the artist's mailing list"></td>
 							</tr>
@@ -132,7 +169,7 @@
 								</td>
 							</tr>
 						</table>
-					</form>
+					</form> -->
 
 				</div>
 
