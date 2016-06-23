@@ -96,35 +96,34 @@
 
 
 				<div class="content">
-					<form id="code_form">
-						<h2 class="form-header">Please enter your code:</h2>
-						<div class="fields">
-							<div class="form-block">
-								<label for="code-field">Code</label>
-								<input id="code-field" type="text" tabindex="1" name="code" value="" placeholder="e.g. lanz-gh9h" required>
-							</div>
-							<div class="form-block">
-								<label for="email-field">Email <span class="de-emphasized">(optional)</span></label>
-								<input id="email-field" type="text" tabindex="2" name="email" value="" placeholder="join the artist's mailing list">
-							</div>
-						</div>
+					<div class="label-column">
+						<h2 class="form-header">Please </h2>
+						<label class="field-block" for="code-field">Code</label>
+						<label class="field-block" for="email-field">Email <span class="de-emphasized">(optional)</span></label>
+					</div>
+					<div class="center-column">
+						<form id="code_form">
+							<h2 class="form-header">Please enter your code:</h2>
 
-						<div class="collection_add">
-							<label class="collection_add_text">
-								<input id="collection_add" name="collection_add" type="checkbox" value="1" checked="">Add this item to my collection
-							</label>
-						</div>
+							<input id="code-field" class="field-block textinput" type="text" tabindex="1" name="code" value="" placeholder="e.g. lanz-gh9h" required>
+							<input id="email-field" class="field-block textinput" type="text" tabindex="2" name="email" value="" placeholder="join the artist's mailing list">
+							<div class="collection_add">
+								<label class="collection_add_text">
+									<input id="collection_add" name="collection_add" type="checkbox" value="1" checked="">Add this item to my collection
+								</label>
+							</div>
 
-						<div id="buttons">
-							<button class="redeem_button" type="submit" name="redeem" value="Redeem">
-								<div>Redeem</div>
-							</button>
-						</div>
+							<div id="buttons">
+								<button class="redeem_button" type="submit" name="redeem" value="Redeem">
+									<div>Redeem</div>
+								</button>
+							</div>
+						</form>
 						<div id="forlesswhitespace"></div>
 						<div class="small-message">
 							Already have an account? <a href="">Log in.</a>
 						</div>
-					</form>
+					</div>
 
 				</div>
 

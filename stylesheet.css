@@ -1,6 +1,6 @@
 .content {
-	text-align: center;
-	font-size: 110%
+	/*text-align: center;*/
+	font-size: 110%;
 }
 
 .de-emphasized {
@@ -11,7 +11,45 @@
 	margin-bottom: 40px;
 }
 
+.label-column {
+	float: left;
+	margin-left: 146px;
+	display: inline-block;
+	width: 140px;
+	text-align: right;
+	margin-right: 14px;
+	height: 100%;
+}
 
+.center-column {
+	float: left;
+	text-align: center;
+	display: inline-block;
+	/*margin-left: -100px;*/
+}
+
+.field-block {
+	display: block;
+	margin-bottom: 20px;
+	padding: 5px;
+}
+
+label.field-block {
+	padding: 7px;
+}
+
+.textinput {
+	display: block;
+	margin-bottom: 20px;
+	text-align: left;
+	font-size: 100%;
+	width: 286px;
+	padding: 5px;
+}
+
+
+
+/*
 .fields {
 	margin-left: -110px;
 }
@@ -32,9 +70,11 @@
 	font-size: 100%;
 	width: 20em;
 	padding: 5px;
-}
+}*/
 
 .collection_add {
+	text-align: left;
+	margin-left: 5px;
 	margin-top: .5em;
 }
 .collection_add input {
@@ -56,7 +96,7 @@
 	margin: 0;
 	background: #1DA0C3;
 	border: none;
-	width: 20em;
+	width: 300px;
 	padding: 6px 0;
 }
 .redeem_button:disabled {
