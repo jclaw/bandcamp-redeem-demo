@@ -26,7 +26,7 @@
 }
 
 .form-block label {
-	display: block;
+	display: inline-block;
 	position: absolute;
 	text-align: right;
 	margin-top: 6px;
@@ -114,4 +114,46 @@
 
 .loggedin .collection-add {
 	display: initial;
+}
+
+@media (max-width: 740px) {
+	body {
+		background: url('img/bg-mobile-light-20120612.gif') #f0f0f0;
+	}
+
+	.pgft-desktop {
+		display: none;
+	}
+	.pgft-phone {
+		display: inherit;
+	}
+
+	#propOpenWrapper {
+		background: none;
+	}
+
+	#pgBd {
+		background: none;
+	}
+
+	.form-block label {
+		margin-left: 0;
+		/*width: initial;*/
+		text-align: left;
+		position: initial;
+	}
+
+	.form-block .form-field {
+		margin-left: 0;
+		margin-left:1.2658227848%;
+		width: 74.683544303797%;
+	}
+}
+@media (min-width: 741px) {
+	.pgft-desktop {
+		display: inherit;
+	}
+	.pgft-phone {
+		display: none;
+	}
 }
