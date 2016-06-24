@@ -138,10 +138,15 @@
 	padding: 8px 0;
 	width: 100%;
 }
+
 .redeem-button:disabled {
 	color: gray;
 	border-color: gray;
 	text-decoration: none;
+}
+
+#redeem-button-text-2 {
+	display: none;
 }
 
 .notable {
@@ -323,6 +328,14 @@
 		padding: 12px;
 	}
 
+	#redeem-button-text-1 {
+		display: none;
+	}
+
+	#redeem-button-text-2 {
+		display: initial;
+	}
+
 	.loggedin #user-mobile-nav {
 		display: inherit;
 	}
@@ -331,12 +344,20 @@
 		display: none;
 	}
 
+	.loggedin .form-header {
+		padding: 30px 0;
+	}
+
 	.loggedin .collection-add {
 		display: none;
 	}
 
-	.loggedin .form-header {
-		padding: 30px 0;
+	.loggedin #redeem-button-text-1 {
+		display: initial;
+	}
+
+	.loggedin #redeem-button-text-2 {
+		display: none;
 	}
 }
 
