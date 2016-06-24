@@ -37,6 +37,7 @@ $(document).ready(function() {
 			mobile: 'download link will be sent here'
 		}
 	];
+	var iconTimer;
 
 	// populate html with correct content
 	$.each(responsiveData, function(index, obj) {
@@ -59,6 +60,34 @@ $(document).ready(function() {
 
 	$('#account-main a').click(function() {
 		logout();
+	})
+
+	$('#code-input').on('input', function() {
+		var input = $(this);
+		var icon = input.parent().find('.bc-ui.form-icon');
+		if (input.val().length == 9 && input.val()[4] == '-') {
+			icon.addClass('loading');
+			iconTimer = setTimeout(function() {
+				var rand = Math.random();
+				if (rand < .67) {
+					icon.removeClass('loading').addClass('check');
+				} else {
+					icon.removeClass('loading').addClass('times');
+				}
+
+			}, 500);
+		} else {
+			clearTimeout(iconTimer);
+			icon.removeClass('loading times check');
+		}
+
+	})
+
+	$('#redeem-form').submit(function() {
+		var form = $(this);
+		var code = form.find('#code-input').val();
+		var email = form.find('#email-input').val();
+		console.log(code, email);
 	})
 
 
