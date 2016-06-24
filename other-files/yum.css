@@ -1,0 +1,62 @@
+.content {
+        text-align: center;
+    }
+    
+    #buttons {
+        margin-top: 1.5em;
+        margin-bottom: 2em;
+    }
+
+    .codeinput {
+        text-align: center;
+        font-size: 150%;
+        width: 10em;
+    }
+
+    .collection_add {
+        margin-top: .5em;
+    }
+    .collection_add input {
+        margin-right: .5em;
+    }
+    .collection_add_text {
+        font-size: 1.1em;
+    }
+    
+    .gimme_button {
+        color: black;
+        border: 2px solid black;
+        margin: 0;
+    }
+    .gimme_button:disabled {
+        color: gray;
+        border-color: gray;
+        text-decoration: none;
+    }
+    
+    .notable {
+        color: red;
+    }
+    
+    #forlesswhitespace {
+        padding: 25px;
+    }
+    
+    #warning {
+        display: none;
+    }
+    
+</style>
+
+{% ef _browser.platform_closed %}
+
+<style type="text/css">
+
+    #code_form {
+        display: none;
+    }
+    
+    #warning {
+        padding: 0.5rem;
+        display: block;
+    }

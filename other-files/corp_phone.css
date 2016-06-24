@@ -1,0 +1,159 @@
+#pgBd {
+    margin-top: 3.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    /* margin-bottom defined in base_phone.css */
+    line-height: 1.35; /* unitless */
+}
+
+img, input, object, embed {
+    max-width: 95%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    font-family: arial, helvetica, sans-serif;
+    color: #333333;
+}
+    
+h1 {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 1em;
+}
+
+h1.verbose {
+    line-height: 1.2;
+}
+
+h1.headline {
+    margin: 0 0 1em;
+    padding: 0 0 0.3em;
+    border-bottom: 0.3rem solid #EC1C24;
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+h1.headline.green-rule {
+    border-color: #3A8B36;
+}
+
+h1.headline.yellow-rule {
+    border-color: #FAA819;
+}
+
+h2, h3, h4 {
+    margin: 1em 0 0.6em;
+}
+
+h2, .h2 {
+    font-size: 1.3rem;
+}
+
+h3, .h3 {
+    font-size: 1.1rem;
+}
+
+h4, .h4 {
+    font-size: 0.8125rem;
+    font-weight: bold;
+}
+
+dl {
+    margin-left: 2em;
+    font-size: 0.8125rem;
+}
+
+.traditional-list ol, .traditional-list ul {
+    margin: 0 0 1em;
+}
+
+.traditional-list li {
+    margin: 0.5em 1.5em;
+    list-style-type: inherit;
+    font-size: 0.8125rem;
+}
+
+table.traditional-table {
+    font-size: 0.8125rem;
+}
+
+table.traditional-table td, table.traditional-table th {
+    padding: 0.2em 0.4em;
+}
+
+table.traditional-table th  {
+    font-weight: bold;
+}
+
+li.step .title {
+    font-weight: bold;
+}
+
+li.step ol li {
+    list-style-type: lower-alpha;
+}
+
+li.step ul li {
+    list-style-type: disc;    
+} 
+
+ul.faq {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.faq li {
+    margin: 1em 0;
+}
+
+ul.faq .question {
+    font-weight: bold;
+}
+
+ul.faq p {
+    margin: 0;
+}
+
+.value {
+    color: green;
+    font-weight: bold;
+}
+
+blockquote {
+    background: #f0f0f0;
+    font-family: arial,helvetica,clean,sans-serif;
+    font-size: 85%;
+    padding: 0.01em 1em;
+}
+
+.section {
+    margin: 2em 0 1em;
+    border-top: 0.3rem solid #FAA819;
+}
+
+.redRule {
+    width:100%;
+    height:0.3rem;
+    background-color:#EC1C24;
+	margin-bottom:1.5em;
+}
+
+.yellowRule {
+    width:100%;
+    height:0.3rem;
+    background-color:#FAA819;
+}
+
+.greenRule {
+    width:100%;
+    height:0.3rem;
+    background-color:#3A8B36;
+}
+
+.razorRule {
+    border-top:0.06em solid rgba(0, 0, 0, 0.1);
+}

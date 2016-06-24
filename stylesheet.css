@@ -67,23 +67,26 @@
 	display: inline-block;
 	position: absolute;
 	text-align: right;
-	margin-top: 9px;
+	margin-top: 12px;
 	margin-left: -20px;
 	font-size: 105%;
 }
 
 .form-field {
-	display: inline-block;
-	position: relative;
+	/*display: inline-block;
+	position: relative;*/
+
+    position: relative;
 }
 
 .textinput {
 	text-align: left;
 	font-size: 100%;
 	padding: 7px 7px;
-	width: 94%;
+	width: 100%;
 	color: #333;
 	font-weight: 500;
+	box-sizing: border-box;
 }
 
 .textinput::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -268,35 +271,67 @@
 	}
 
 	.form-block {
-		display: table;
+		/*display: table;
+		font-size: 15px;
+		margin-top: 10px;*/
+
 		font-size: 15px;
 		margin-top: 10px;
 	}
 
 	.form-block label {
-		display: table-cell;
+		/*display: table-cell;
 		margin-left: 0;
 		width: 56px;
 		text-align: left;
 		position: initial;
 		margin-right: 9px;
 		color: #818285;
-		font-weight: 500;
+		font-weight: 500;*/
 
+		margin-left: 0;
+		width: 44px;
+		height: 42px;
+		text-align: left;
+		position: initial;
+		margin-right: 9px;
+		color: #818285;
+		font-weight: 500;
+		float: left;
 	}
 
 	.form-block .form-field {
-		display: table-cell;
+		/*display: table-cell;
 		margin-left: 0;
 		width: initial;
+		text-align: left;*/
+
+		margin-left: 0;
+		width: 100%;
 		text-align: left;
+		box-sizing: border-box;
+		padding-left: 53px;
 	}
 
 	.textinput {
-		border: none;
+		/*border: none;
 		border-radius: 4px;
+		border-spacing: 2px;
 		width: 97%;
+		padding: 12px 8px;*/
+
+		border: 2px solid rgba(0,0,0,0);
+		border-radius: 4px;
+		width: 100%;
 		padding: 12px 8px;
+		height: 42px;
+	}
+
+	.textinput:focus {
+		outline: none;
+		border: 2px solid #1DA0C3;
+
+		box-shadow: none;
 	}
 
 	.other-content {

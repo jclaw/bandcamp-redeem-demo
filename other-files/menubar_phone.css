@@ -1,0 +1,401 @@
+/***  PAGE ATTRIBUTES  ***/
+
+#menubar-wrapper {
+    display: none;
+}
+
+.has-menubar-phone #menubar-wrapper {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #ddd;
+    background-image: none;
+    border-bottom: dotted 1px #aaa;
+
+    /* Changing from 1 to 2 to ensure navbar menu isn't clipped by #tralbumArt  - sdg 2012.10.31 */
+    z-index: 2;
+}
+
+#menubar-vm.loading .hidden-while-loading {
+    display: none;
+}
+
+#menubar-wrapper.extended,
+#menubar.extended,
+.menubar > ul > li.extended,
+.menubar > ul > li.search.extended {
+    display: none!important;
+}
+
+#legal {
+    float: right;
+}
+
+/***  MENU BAR  ***/
+
+.menubar {
+    position: relative;
+    height: 43px;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+#site-nav {
+    position: absolute;
+    left: 0;
+}
+
+#user-nav {
+    position: absolute;
+    right: 0;
+}
+
+.menubar * {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/***  MENU BAR STYLINGS  ***/
+
+.menubar a {
+    color: #408294;
+}
+
+.menubar ul.horizontal {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    white-space: nowrap; 
+}
+
+.menubar > ul > li {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+/***  BAR ITEMS  ***/
+
+.menubar > ul > li > :first-child {
+    display: block;
+    height: 43px;
+    line-height: 43px;
+    padding: 0 15px;
+
+    transition: background 0.1s ease-out;
+    -webkit-transition: background 0.1s ease-out;
+    -moz-transition: background 0.1s ease-out;
+}
+
+.menubar > ul > li .menucaret {
+    display: inline-block;
+    width: 9px;
+    height: 6px;
+    overflow: hidden;
+    margin: 20px 0 0 7px;
+    background-position: 0 -1px;
+    float: left;
+}
+
+.menubar > ul > li .logo {
+    background: url('/img/bandcamp-logo-bc-color.svg') 30% 50% no-repeat;
+    background-size: 100%;
+    width: 45px;
+    height: 45px;
+}
+
+/***  ALTERNATE APPEARANCES OF MENU BAR ITEMS  ***/
+
+.menubar > ul > li.highlighted > :first-child {
+    background-color: #CCC;
+}
+
+.menubar > ul > li.selected > :first-child {
+    background-color: #AAAAAA;
+    color: white;
+}
+
+.menubar > ul > li.selected .menucaret {
+    background-position:-9px -1px;
+}
+
+.menubar > ul > li.disabled > :first-child {
+    color: #aab3a9;
+}
+
+.menubar > ul > li.message > :first-child {
+    color: #AAAAAA;
+}
+
+.menubar #collection-alt {
+    display: none;
+}
+
+.menubar #account-note-alt {
+    display: none;
+}
+
+.menubar > ul > li .new {
+    display:inline-block;
+    width: 36px;
+    height: 11px;
+    overflow: hidden;
+    margin-top:10px;
+    background-position:0 -170px;
+    vertical-align: top;
+}
+
+.menubar > ul > li.message.highlighted > :first-child,
+.menubar > ul > li.message.selected > :first-child {
+    background-color: transparent;
+}
+
+/***  BAND BAR ITEM  ***/
+
+.menubar .bandname {
+    max-width: 150px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+}
+
+/***  ADD MUSIC BAR ITEM  ***/
+
+.menubar .add-music {
+    float: left;
+}
+
+/***  USER BAR ITEM  ***/
+
+.menubar .userpic {
+    display: block;
+    float: left;
+    background-color: #fff;
+    margin:8px 10px 0 0;
+    width: 25px; height: 25px;    
+    border: solid 1px rgba(0,0,0,.2);
+}
+
+.menubar .username {
+    display: inline-block;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left:0.1em;
+    float: left;
+}
+
+.menubar .badge-pro {
+    background: #8eafb8;
+    font-size: 10px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0 3px;
+    color: #fff;
+    line-height: 15px;
+    margin: 15px 0 0 5px;
+    float: left;
+}
+
+.menubar > ul > li.selected .badge-pro {
+    background: #919191;
+    color: #eee;
+}
+
+/***  FAN (USER) BAR ITEM  ***/
+
+.menubar > ul > li .settings-gear .bc-ui {
+    background-position: 0 -181px;
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin: 12px 0 0;
+}
+
+.menubar > ul > li span.smallvertline {
+    height: 17px;
+    width: 0;
+    margin: 15px 0 0;
+    border-left: 1px solid #cbcbcb;
+    padding: 0;
+}
+
+/***  CART BAR ITEM  ***/
+
+.menubar #cart-item, .menubar #cart-item-divider {
+    display: none;
+}
+
+.cart-icon {
+    width: 1.5rem;
+    display: block;
+    float: left;
+    height: 43px;
+}
+
+.cart-icon .inner {
+    width: 1.5rem;
+    height: 1.1rem;
+    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background-size: 500% auto;
+    background-position: 0 27.7%;
+    position: relative;
+    top: 12px;
+}
+
+.no-svg .cart-icon {
+    background-image: url(/img/mobile-sprites-20150520.png);
+}
+
+.cart-number {
+    padding: 0 0.25rem;
+    background-color: #5ac523;
+    font-size: 0.6875rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0.1875rem;
+    color: #fff;
+    position: relative;
+    top: -1px;
+}
+
+/***  MENU STYLINGS  ***/
+
+.menubar .ui-menu {
+    padding: 4px 0 2px 0;
+}
+
+.menubar .ui-corner-all {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+.menubar .ui-menu-item a {
+    padding: 5px 22px;
+    font-family: arial, helvetica, clean, sans-serif;
+}
+
+.menubar .ui-menu-item {
+    border: none;
+}
+
+.menubar .menu .ui-menu-divider {
+    margin: 5px 0px;
+}
+
+.menubar .menu {
+    display: none; /* initially hide */
+    float: left;
+    position: absolute;
+    min-width: 100px; /* min width of menus */
+    font-size: 100%;
+}
+
+.menubar .menu-icon {
+    float: left;
+    margin-left: -12px;
+}
+
+/* .ui-widget-content is added by jquery */
+.menubar .ui-widget-content {
+    background: #EEEEEE;
+}
+
+/* .ui-state-focus is a jquery class added to an item's <a> when rolled over */
+.menubar .ui-menu-item .ui-state-focus {
+    border: none;
+    background: #BBBBBB;
+    color: white;
+    margin: 0;
+}
+
+/* .ui-state-disabled goes on the menu item */
+.menubar .ui-menu-item.ui-state-disabled {
+    margin: 0;
+    opacity: 1.0;
+}
+
+.menubar .ui-menu-item.ui-state-disabled a {
+    cursor: pointer;
+    color: #AAAAAA;
+}
+
+/*** SEARCH BAR ITEM  ***/
+
+.menubar .search {
+    float: left;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.menubar input#search-field {
+    margin: 0;
+    height: 21px;
+    line-height: 21px;
+    width: 280px;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    color: #333;
+    font-size: 13px;
+    padding: 0 25px 0 3px;
+
+    -webkit-user-select: text;
+}
+
+.menubar .withband input#search-field {
+    -width: 260px;
+}
+
+.menubar #search .hint {
+    color: #b0b0b0;
+}
+
+.menubar #search button {
+    margin: 0;
+    padding: 0;
+    height: 28px;
+    line-height: 22px;
+    border: 6px solid transparent;
+    font-size: 10px;
+    width: 28px;
+    overflow: hidden;
+    position: relative;
+    left: -31px;  
+    top: 2px;
+    background-color: transparent;
+}
+
+.menubar #search button:hover,
+.menubar #search button:active {
+    text-decoration: none;
+}
+
+.menubar #search button .bc-ui.menubar-search-icon {
+    background-position: 0 -200px;
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    text-indent: -999rem;
+}
+
+.menubar > ul > li.search.highlighted > :first-child,
+.menubar > ul > li.search.selected > :first-child {
+    background-color: transparent;
+}
+
+.menubar > ul > li.mobile-hidden {
+    display: none;
+}

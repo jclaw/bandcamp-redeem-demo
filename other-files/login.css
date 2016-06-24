@@ -1,0 +1,106 @@
+#content {
+    padding-left: 240px; /* IE6: margin causes problems here */
+}
+
+#content.center-login {
+    padding-left: 0px;
+    text-align: center;
+}
+
+#content.center-login #loginform {
+    width: 46%;
+    padding-left: 28%;
+}
+
+p, ul, ol {
+    max-width: 40em;
+}
+
+h2 {
+    display:inline-block;
+    color: #333;
+}
+
+form dl {
+    margin-top: 0;
+    padding-top: 22px;
+    overflow: auto;
+}
+
+form .alert {
+    display: block;
+    margin-top: 6px;
+}
+
+.textInput {
+    width: 310px;
+    border-top: 1px solid #9c9c9c;
+    border-right: 1px solid #9c9c9c;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding: .4em;
+    font-family: arial,helvetica,clean,sans-serif;
+    font-size:1.16em;
+}
+
+.pagelogin .textInput {
+    width: 260px;
+}
+
+#buttons {
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
+#buttons > button {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.pagelogin #buttons{
+/*    margin: 1em 0 2em 105px; */
+    margin: 1em 0 2em 18ex;
+}
+
+dl.tableLayout dt {
+    width: 17ex;
+    padding-top: 0.8em;
+}
+
+#forgotPassword {
+    margin-top: 6px;
+}
+
+#submit[disabled] {
+    color: #fff;
+    background-color: #82c3fa;
+    border-color: #8fb8db;
+    cursor: default;
+}
+
+#submit[disabled]:hover {
+    text-decoration: none;
+}
+
+#forgotPasswordForm dl {
+    padding: 0;
+}
+
+#resetPasswordForm dl {
+    padding-top: 10px;
+}
+
+.pageforgotpass dl.tableLayout dd {
+    padding: 2px;  /* leave space for the Chrome/Safari focus highlight */
+}
+
+.pageresetpass dl.tableLayout dt {
+    width: 14ex;
+}
+
+#twofactor_input dl.tableLayout {
+    padding-top: 0px;
+}
+
+#twofactor_input dl.tableLayout dd {
+    padding: 0px 0px 2px 10px;
+}

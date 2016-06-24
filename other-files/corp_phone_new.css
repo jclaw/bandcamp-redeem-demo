@@ -1,0 +1,292 @@
+#pgBd {
+    width: auto;
+    margin-top: 3.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    /* margin-bottom defined in base_phone.css */
+    line-height: 1.45; /* unitless */
+}
+
+#pgContent.singlecol {
+    width: auto;
+    min-width: 0;
+}
+
+p {
+    margin: 0.5rem 0 0.9rem;
+    line-height: 1.45; /* unitless */
+    font-size: 0.875rem;
+}
+
+img, input, object, embed {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+h2 {
+    display: inline-block;
+    font-size:0.875rem;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.35; /* unitless */
+}
+
+h1 + h2 {
+    margin-top: 0.7rem;
+}
+
+h2.bigger {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+h3 {
+    display: inline-block;
+    margin:0;
+    font-size:1rem;
+}
+
+hr.section {
+    margin:1.5rem 0;
+    color:#ccc;
+    background-color:#ccc;
+    height:1px;
+    border:0;
+}
+
+hr.section + h2 {
+    margin-top: 0;
+}
+
+p + hr.section {
+    margin-top: 1rem;
+}
+
+#pgContent li {
+    padding: 0 0 1rem 0;
+}
+
+li {
+    font-size: 0.875rem;
+}
+
+ul {
+   list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+    padding: 0 1.5rem;
+}
+
+ol li {
+    list-style-type: decimal;
+}
+
+
+.tldr {
+    font-size: 1rem;
+    font-weight:bold;
+    padding:1rem 0;
+    line-height: 1.35; /* unitless */
+}
+
+.tldr.midstream {
+    padding:1.5rem 0 0.5rem;
+}
+
+
+
+/* page: pricing */
+
+.page-pricing .h3 {
+    font-weight:bold;
+}
+
+.page-pricing p.premium {
+    padding: 0;
+    margin: 0.3rem 0 0.5rem 0;
+}
+
+.page-pricing hr.section.premium {
+    color:#b8cbd0;
+    background-color:#b8cbd0;
+    height:1px;
+    border:0;
+}
+
+h2#premiumfeatures {
+    color:#408294;
+    border-bottom:1px solid #b8cbd0;
+    display:block;
+    margin:0.5rem 0 1.5rem;
+}
+
+h2#premiumfeatures span {
+    display:inline-block;
+    background: url('/img/bg-texture-light.gif') #f6f6f6;
+    padding:0 0.5rem 0 0;
+    position:relative;
+    top:0.7em;
+}
+
+/* page: jobs */
+
+
+.page-jobs h3 {
+    margin: 1rem 0 0.4rem;
+}
+
+.page-jobs img#address {
+    margin: 1rem 0;
+}
+
+.page-jobs ul.req {
+    margin: 0;
+    padding: 0 0 0 1rem;
+}
+
+.page-jobs ul.req li {
+    list-style-type: disc;
+}
+
+.page-jobs h3 {
+    font-weight: bold;
+}
+
+.page-jobs p.apply {
+    margin-top: 1rem;
+}
+
+/* page why_merch */
+
+.whymerch.topimgs .img1 {background: url('/img/whymerch-tnsmall-1.jpg');}
+.whymerch.topimgs .img2 {background: url('/img/whymerch-tnsmall-2.jpg');}
+.whymerch.topimgs .img3 {background: url('/img/whymerch-tnsmall-3.jpg');}
+
+.whymerch.topimgs .img4,
+.whymerch.topimgs .img5 {
+    display: none;
+} 
+.whymerch.topimgs {
+    font-size: 0;
+    overflow: hidden;
+    margin: 0;
+    height: auto;
+}
+.whymerch.topimgs .imgs {
+    font-size: 0;
+    display: inline-block;
+    width: 100%;
+}
+.whymerch.topimgs a {
+    display: inline-block;
+    font-size: 14px;
+    width: 32.3%;
+    height: 0;
+    padding-bottom: 20%;
+    background-size: cover;
+    margin: 0 1% 0 0;
+}
+
+.page-whymerch h1 {
+    margin-top: 0.5em;
+    line-height: 120%;
+}
+.page-whymerch .tldr {
+    margin: 0;
+    padding: 0;
+    padding-top: 0.5rem;
+}
+.page-whymerch .letus {
+    display: block;
+    margin: 1em 0 0;
+    font-size: 0.875rem;
+    font-weight: normal;
+}
+
+.page-whymerch .merchsold{
+    font-family: georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 1em 0;
+    margin: 1em 0;
+    clear: both;
+}
+
+.page-whymerch .phoneimg {
+    float: right;
+    margin: 0.5em 0 1em 1.2em;
+    background: url('/img/bandcamp-mobile-merch.jpg') no-repeat;
+    width: 39%;
+    height: 0;
+    padding-bottom: 43%;
+    background-size: cover;
+}
+
+.page-whymerch .players iframe {
+    margin: 1em 0 0;
+    display: inline-block;
+    width: 300px!important;
+}
+
+.page-whymerch .discoverimg {
+    padding: 1em 0;
+    display: block;
+}
+
+.page-whymerch .bottomimgs {
+    font-size: 0;
+    margin: 0;
+}
+.page-whymerch .bottomimgs a {
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 67.5%;
+    margin: 1rem 0 0;
+}
+
+.page-whymerch .img1 {background: url('/img/whymerch-tnbig-1.jpg');}
+.page-whymerch .img2 {background: url('/img/whymerch-tnbig-2.jpg');}
+.page-whymerch .img3 {background: url('/img/whymerch-tnbig-3.jpg');}
+.page-whymerch .img4 {background: url('/img/whymerch-tnbig-4.jpg');}
+.page-whymerch .img5 {background: url('/img/whymerch-tnbig-5.jpg');}
+.page-whymerch .img6 {background: url('/img/whymerch-tnbig-6.jpg');}
+.page-whymerch .img7 {background: url('/img/whymerch-tnbig-7.jpg');}
+.page-whymerch .img8 {background: url('/img/whymerch-tnbig-8.jpg');}
+.page-whymerch .img9 {background: url('/img/whymerch-tnbig-11.jpg');}
+.page-whymerch .img10 {background: url('/img/whymerch-tnbig-10.jpg');}
+
+
+.page-basics .bcbasics {
+    margin: 1em 0 0;
+}
+
+.page-basics .item {
+    margin: 0;
+    position: relative;
+}
+
+.page-basics .num {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 5px;
+    top: 10px;
+    font-size: 10px;
+}
+
+.page-basics .item p {
+    width: 88%;
+}
+

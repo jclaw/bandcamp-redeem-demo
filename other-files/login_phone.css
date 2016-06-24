@@ -1,0 +1,51 @@
+
+p.alert {
+    margin: 0;
+}
+
+.hiddenAccess {
+    position: absolute;
+    left: -10000px;
+    top: -10000px;
+}
+
+#generic_alert {
+    margin: 1rem 0;
+}
+
+#user-nav .signup-item {
+    display: none;  /* don't emphasize artist signup on mobile, for now */
+}
+
+form dl {
+    margin: 1rem 0;
+}
+
+form dt {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+form .textInput {
+    width: 100%;
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+}
+
+button[disabled].compound-button {
+    color: #888;
+}
+
+.loginSignupSwitch {
+    display: none;  /* don't emphasize artist signup on mobile, for now */
+}
+
+#forgotPassword {
+    margin: 0.5rem 0;
+}
+
+.loginPhoneSignup {
+    display: block;
+}
+
