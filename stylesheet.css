@@ -191,7 +191,7 @@
 
 	#menubar-wrapper .menubar-divider {
 		height: 100%;
-		width: 1px;
+		width: 0px;
 		position: absolute;
 		border-left: 1px solid #F1F1F1;
 		border-right: 1px solid #C6C6C6;
@@ -212,6 +212,16 @@
 
 	#pgBd > .content {
 		margin: 20px;
+	}
+
+	#profimg {
+		background: url('img/profimg.JPG');
+		height: 30px;
+		width: 30px;
+		background-size: cover;
+		float: left;
+		margin-top: 6px;
+		margin-right: 14px;
 	}
 
 	.form-header {
