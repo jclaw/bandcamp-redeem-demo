@@ -52,6 +52,7 @@ $(document).ready(function() {
 
 	$('.small-message a').click(function() {
 		login();
+		return false;
 	})
 
 	$('.bc-ui.gear').click(function() {
@@ -60,6 +61,7 @@ $(document).ready(function() {
 
 	$('#account-main a').click(function() {
 		logout();
+		return false;
 	})
 
 	$('#code-input').on('input', function() {
