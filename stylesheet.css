@@ -337,6 +337,19 @@
 		padding: 12px;
 	}
 
+	.bc-ui.loading {
+		margin-top: -32px;
+	}
+
+	.bc-ui.check {
+		margin-top: -29px;
+	}
+
+	.bc-ui.times {
+		margin-top: -30px;
+	}
+
+
 	.loggedin #user-mobile-nav {
 		display: inherit;
 	}

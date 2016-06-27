@@ -22,17 +22,20 @@ $(document).ready(function() {
 		if (input.val().length == 9 && input.val()[4] == '-') {
 			icon.addClass('loading');
 			iconTimer = setTimeout(function() {
-				var rand = Math.random();
-				if (rand < .67) {
-					icon.removeClass('loading').addClass('check');
-				} else {
-					icon.removeClass('loading').addClass('times');
-				}
-
+				icon.removeClass('loading').addClass('check');
 			}, 500);
 		} else {
 			clearTimeout(iconTimer);
 			icon.removeClass('loading times check');
+		}
+	})
+
+	$('#code-input').focusout(function() {
+		console.log('here');
+		var input = $(this);
+		var icon = input.parent().find('.bc-ui.form-icon');
+		if (!icon.hasClass('loading') && !icon.hasClass('check')) {
+			icon.addClass('times');
 		}
 	})
 
