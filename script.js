@@ -21,6 +21,8 @@ $(document).ready(function() {
 		var icon = input.parent().find('.bc-ui.form-icon');
 		if (input.val().length == 9 && input.val()[4] == '-') {
 			icon.addClass('loading');
+
+			// simulating successful ajax request:
 			iconTimer = setTimeout(function() {
 				icon.removeClass('loading').addClass('check');
 			}, 500);
@@ -31,7 +33,6 @@ $(document).ready(function() {
 	})
 
 	$('#code-input').focusout(function() {
-		console.log('here');
 		var input = $(this);
 		var icon = input.parent().find('.bc-ui.form-icon');
 		if (!icon.hasClass('loading') && !icon.hasClass('check')) {
