@@ -68,7 +68,7 @@
     margin: 14px auto;
 }
 .inline_player .playbutton.busy:after {
-    background-image: url(/img/playerbusy-noborder.gif);
+    background-image: url("http://localhost:8000/img/playerbusy-noborder.gif");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     border:none;
@@ -77,14 +77,14 @@
     width: 44px;
 }
 .inline_player .embeddedplaybutton {
-    background: url(/img/embedplaypause.gif);
+    background: url("http://localhost:8000/img/embedplaypause.gif");
     background-position: 50% 30px;
     width: 31px;
     height: 30px;
     cursor: pointer;
 }
 .inline_player .embeddedplaybutton.busy {
-    background-image: url(/img/playerbusy_small.gif);
+    background-image: url("http://localhost:8000/img/playerbusy_small.gif");
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
@@ -92,19 +92,19 @@
     background-position: 50% 0px;
 }
 .inline_player .embeddedplaybutton.big {
-    background-image: url(/img/playpause.gif);
+    background-image: url("http://localhost:8000/img/playpause.gif");
     background-position: 50% 45px;
 }
 .inline_player .embeddedplaybutton.big.playing {
     background-position: 50% 0px;
 }
 .inline_player .embeddedplaybutton.big.busy {
-    background-image: url(/img/playerbusy.gif);
+    background-image: url("http://localhost:8000/img/playerbusy.gif");
     background-position: 50% 50%;
 }
 
 .inline_player .tinyplayer {
-    background: url(/img/shortembed.gif);
+    background: url("http://localhost:8000/img/shortembed.gif");
     background-position: 50% 23px;
     cursor: pointer;
 }
@@ -123,7 +123,7 @@
 
 .inline_player .nextbutton,
 .inline_player .prevbutton {
-    background:transparent url(/img/nextprev.png) no-repeat 0 0;
+    background:transparent url("http://localhost:8000/img/nextprev.png") no-repeat 0 0;
     background-size: 40px 12px;
     cursor: pointer;
     width: 20px;
@@ -154,7 +154,7 @@
 
 .invertIconography .inline_player .prevbutton,
 .invertIconography .inline_player .nextbutton {
-    background-image: url(/img/nextprevinvert.png);
+    background-image: url("http://localhost:8000/img/nextprevinvert.png");
 }
 
 .inline_player.one-track .nextbutton.hiddenelem,
@@ -326,7 +326,7 @@ div.has-video-wrapper {
 /* CSS shared between album and track pages */
 
 .bc-ui2 {
-    background: url('/img/_sprite-bc-ui2-20130524.png') no-repeat;
+    background: url("http://localhost:8000/img/_sprite-bc-ui2-20130524.png") no-repeat;
 }
 
 .about-label, .credits-label, .license-label, .feed-label, .tags-label, .lyrics-label {
@@ -710,7 +710,7 @@ div.has-video-wrapper {
     height: 15px;
     padding-right: 8px;
     vertical-align: text-top;
-    background: url(/img/cartIcon.png) no-repeat;
+    background: url("http://localhost:8000/img/cartIcon.png") no-repeat;
 }
 
 .buy-dlg .cc-strip {
@@ -856,7 +856,7 @@ div.has-video-wrapper {
     width: 1.2em;
     margin-right: 0.2em;
     vertical-align: text-bottom;
-    background: url(/img/loading-dark.gif) no-repeat;
+    background: url("http://localhost:8000/img/loading-dark.gif") no-repeat;
     background-size: cover;
     opacity: 0.5;
 }
@@ -974,7 +974,7 @@ div.has-video-wrapper {
 .buy-dlg #download-panel-busy {
     display: none;
     padding-left: 22px;
-    background: url(/img/spinny.gif) no-repeat left center;
+    background: url("http://localhost:8000/img/spinny.gif") no-repeat left center;
 }
 
 .buy-dlg #download-panel-complete {
@@ -1649,7 +1649,7 @@ div.has-video-wrapper {
 }
 
 .payment-pref-dlg .paypal {
-    background: transparent url("/img/_sprite-bc-cc-cart@2x.png") repeat scroll -5px -101px;
+    background: transparent url("http://localhost:8000/img/_sprite-bc-cc-cart@2x.png") repeat scroll -5px -101px;
     background-size: 114px 122px;
     width: 71px;
     height: 20px;
@@ -1751,7 +1751,7 @@ div.has-video-wrapper {
 
 /** low-res icons **/
 .icon-cc {
-    background: url(/img/_sprite-bc-cc-cart.png);
+    background: url("http://localhost:8000/img/_sprite-bc-cc-cart.png");
     width: 32px;
     height: 20px;
     background-position: -9px -11px;
@@ -1782,7 +1782,7 @@ div.has-video-wrapper {
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     .icon-cc {
-        background-image: url(/img/_sprite-bc-cc-cart@2x.png);
+        background-image: url("http://localhost:8000/img/_sprite-bc-cc-cart@2x.png");
         background-size: 114px 122px;
         width: 32px;
         height: 20px;
@@ -2868,7 +2868,7 @@ div.rightColumn.cart-visible #bio-container {
 }
 
 .popupimage_item.loading {
-    background: url(/img/playerbusy_transp.gif) no-repeat;
+    background: url("http://localhost:8000/img/playerbusy_transp.gif") no-repeat;
     background-position: 50% 50%;
 }
 
@@ -2904,7 +2904,7 @@ div.rightColumn.cart-visible #bio-container {
     cursor: pointer;
     top: 50%;
     margin-top: -15px;
-    background-image:url(/img/popup_image.png);
+    background-image:url("http://localhost:8000/img/popup_image.png");
     background-repeat:no-repeat;
     width: 30px;
     height: 30px;
@@ -2914,7 +2914,7 @@ div.rightColumn.cart-visible #bio-container {
     position: absolute;
     top: 85%;
     margin: auto;
-    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background: url("http://localhost:8000/img/mobile-sprites-20150520.svg") no-repeat;
     background-size: 500% auto;
     width: 2rem;
     height: 2rem;
@@ -2923,7 +2923,7 @@ div.rightColumn.cart-visible #bio-container {
 }
 
 .no-svg .popupimage_navicon {
-    background-image: url(/img/mobile-sprites-20150520.png);
+    background-image: url("http://localhost:8000/img/mobile-sprites-20150520.png");
 }
 
 .popupimage_navicon.dismiss {
@@ -2959,7 +2959,7 @@ div.rightColumn.cart-visible #bio-container {
     height: 100%;
     opacity: 0.5;
     filter:alpha(opacity=50);
-    background: url(/img/playerbusy.gif) no-repeat;
+    background: url("http://localhost:8000/img/playerbusy.gif") no-repeat;
     background-position: 50% 50%;
 }
 
@@ -2969,7 +2969,7 @@ div.rightColumn.cart-visible #bio-container {
     height: 100%;
     opacity: 0.5;
     filter:alpha(opacity=50);
-    background: url(/img/playerbusy_small.gif) no-repeat;
+    background: url("http://localhost:8000/img/playerbusy_small.gif") no-repeat;
     background-position: 50% 50%;
 }
 
@@ -3001,7 +3001,7 @@ div.rightColumn.cart-visible #bio-container {
     cursor: pointer;
     position: relative;
     top: 2em; left: -1em;
-    background-image:url(/img/popup_image.png);
+    background-image:url("http://localhost:8000/img/popup_image.png");
     background-repeat:no-repeat;
     width:30px;
     height:30px;
@@ -3043,7 +3043,7 @@ div.rightColumn.cart-visible #bio-container {
     cursor: pointer;
     top: 50%;
     margin-top: -15px;
-    background-image:url(/img/popup_image.png);
+    background-image:url("http://localhost:8000/img/popup_image.png");
     background-repeat:no-repeat;
     width: 30px;
     height: 30px;
@@ -3079,7 +3079,7 @@ div.rightColumn.cart-visible #bio-container {
     height: 100%;
     opacity: 0.5;
     filter:alpha(opacity=50);
-    background: url(/img/playerbusy_transp.gif) no-repeat;
+    background: url("http://localhost:8000/img/playerbusy_transp.gif") no-repeat;
     background-position: 50% 50%;
 }
 
@@ -3089,7 +3089,7 @@ div.rightColumn.cart-visible #bio-container {
     height: 100%;
     opacity: 0.5;
     filter:alpha(opacity=50);
-    background: url(/img/playerbusy_small.gif) no-repeat;
+    background: url("http://localhost:8000/img/playerbusy_small.gif") no-repeat;
     background-position: 50% 50%;
 }
 
@@ -3311,7 +3311,7 @@ div.rightColumn.cart-visible #bio-container {
     line-height: 13px;
     text-decoration: none;
     color: #3B5998;
-    background: url("/img/tweet.png") no-repeat scroll 3px center #ECEEF5;
+    background: url("http://localhost:8000/img/tweet.png") no-repeat scroll 3px center #ECEEF5;
 }
 
 .share-embed-container .twitter-button:hover {
@@ -3325,7 +3325,7 @@ div.rightColumn.cart-visible #bio-container {
     overflow: hidden;
     width: 81px;
     height: 20px;
-    background: url('/img/tumblr_share_1.png') top left no-repeat transparent;
+    background: url("http://localhost:8000/img/tumblr_share_1.png") top left no-repeat transparent;
 }
 
 
@@ -3392,11 +3392,11 @@ div.rightColumn.cart-visible #bio-container {
     color: #0687F5;
 }
 .share_dialog .ui-widget-header .ui-icon {
-    background-image: url(/jslib/jquery-ui/1.9.2/themes/base/images/ui-icons_eeeeee_256x240.png);
-    background-image: url(/jslib/jquery-ui/1.9.2/themes/base/images/ui-icons_888888_256x240.png);
+    background-image: url("http://localhost:8000/jslib/jquery-ui/1.9.2/themes/base/images/ui-icons_eeeeee_256x240.png");
+    background-image: url("http://localhost:8000/jslib/jquery-ui/1.9.2/themes/base/images/ui-icons_888888_256x240.png");
 }
 .share_dialog .ui-widget-header .ui-state-hover .ui-icon {
-    background-image: url(/jslib/jquery-ui/1.9.2/themes/base/images/ui-icons_eeeeee_256x240.png);
+    background-image: url("http://localhost:8000/jslib/jquery-ui/1.9.2/themes/base/images/ui-icons_eeeeee_256x240.png");
 }
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
     background: none;
@@ -3925,7 +3925,7 @@ margin: 3px 6px 3px 1px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 4px;
-    background-image: url(/img/green-tick.png);
+    background-image: url("http://localhost:8000/img/green-tick.png");
     background-repeat: no-repeat;
     background-position: center;
     min-width: 30px;
@@ -4025,7 +4025,7 @@ margin: 3px 6px 3px 1px;
     left: 410px;
     float: right;
     width: 580px;
-    background: url('/img/_line-2px-bebebe-dotted-vert.png') repeat-y;
+    background: url("http://localhost:8000/img/_line-2px-bebebe-dotted-vert.png") repeat-y;
     text-align: center;
     padding: 0 0 0 20px;
 }
@@ -5277,7 +5277,7 @@ a.back-to-label-link:hover {
     }
 
     dl.video-list .bc-ui2 {
-        background: url('/img/_sprite-bc-ui2-20130524.png') no-repeat;
+        background: url("http://localhost:8000/img/_sprite-bc-ui2-20130524.png") no-repeat;
         height: 13px;
         width: 14px;
         display: inline-block;

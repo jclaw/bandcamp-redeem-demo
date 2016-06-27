@@ -1,0 +1,422 @@
+/* ------------- trackpipe_basic.css --------------- */
+/* common trackpipe styles across all layouts, nothing page-specific in here */
+
+/***** YUI Fonts CSS begin ***********************/
+
+body {font:13px/1.231 'Helvetica Neue',Helvetica,Arial,sans-serif;*font-size:small;*font:x-small;}
+/**
+ * Bump up IE to get to 13px equivalent
+ */
+
+/***** YUI Fonts CSS end *************************/
+
+#pgBd, #pgFt {
+    font-size: 93%;
+}
+
+h2 {
+    font-size: 146.5%;
+}
+
+a, button {
+    color: #0687f5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover, button:hover {
+    text-decoration: underline;
+}
+
+button {
+    margin-right: 0.5em;
+    padding: 0.25em;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 150%;
+    text-align: center;
+    border: 1px solid silver;
+    background: white;
+}
+
+button div {
+    min-width: 4em;
+    white-space: nowrap;
+}
+
+img {
+    border: none;
+}
+
+ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* Standardize placeholder color. If a page specifies a color for input text, then Firefox applies the color to the placeholder as well. This prevents that. */
+input::-webkit-input-placeholder {
+    color: #b0b0b0 !important;
+}
+input:-moz-placeholder {
+    color: #b0b0b0 !important;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #b0b0b0 !important;
+}
+
+/* Normalize left margin for radios/checkboxes; otherwise FF ends up
+   with a ragged left margin in some forms. */
+input[type="checkbox"] {
+    margin-left: 1px;
+}
+
+/* These form elements seem a bit high relative to surrounding
+   text in FF, so correct for it. It sure would be nice if
+   vertical-align:middle did the trick, but that makes them
+   too low (at least in Windows). */
+
+ul.horizNav {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    white-space: nowrap;
+}
+
+ul.horizNav li {
+    display: inline;
+    padding-left: 1ex;
+    padding-right: 0.3ex;
+}
+
+/* used to visually hide text but keep it available for screen readers */
+.hiddenAccess {
+    position: absolute;
+    left: -10000px;
+    top: -10000px;
+}
+
+,  {
+    color: #333;
+}
+
+
+/* ------------- trackpipe_layout.css --------------- */
+/* Trackpipe styles for the shared page layout.
+Styles specific to a single page should live in that page. */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #dddddd;
+}
+
+#pgFt a {
+    color: white;
+}
+
+#pgFt {
+    font-size: 100%;
+}
+
+#footer-logo-wrapper {
+    float: left;
+}
+
+#footer-logo {
+    float: left;
+	width: 96px;
+	height: 15px;
+	margin: 2px 0px 0px 10px;
+	background: url("http://localhost:8000/img/footerLogo.png") no-repeat;
+}
+
+#customHeaderWrapper {
+    margin:-35px -30px 44px -30px;
+}
+#customHeader > * {
+    display: none;  /* hide phone and other headers */
+}
+
+#customHeader > .desktop-header {
+    display: block; /* overrides previous */
+    width:975px;
+    min-height:40px;
+    position:relative;
+}
+
+#centerWrapper {
+	position:static;
+	width:975px;
+	margin:0px auto;
+}
+
+#propOpenWrapper {
+	min-height:100%;
+	background-color:white;
+	position:absolute;
+}
+.defaultbg #propOpenWrapper {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+}
+
+#pgBd {
+    width: 915px;
+    margin-bottom: 1.9em;
+    padding: 35px 30px 45px;
+    background: white;
+    position: relative;
+}
+
+#legal {
+    float: right;
+}
+
+#pgFt .horizNav {
+    margin: 0px 1ex;
+}
+
+/* utils */
+.bc-ui {
+    background:url("http://localhost:8000/img/_sprite-bc-ui-20150529.png");
+}
+/* end utils */
+
+
+/* ------------- menubar.css --------------- */
+/***  PAGE ATTRIBUTES  ***/
+
+#menubar-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 43px;
+    border-top: solid 5px #848484;
+    background-color: #ddd;
+    background-position:0 42px;
+    background-repeat: repeat-x;
+
+    /* IE hack to make child menus' z-index work correctly. */
+    /* Changing from 1 to 2 to ensure menubar menu isn't clipped by #tralbumArt  - sdg 2012.10.31 */
+    /* Changing back to 1 after removing #tralbumArt's z-index. This seems to fix the layering problems with menubar + tralbum art + modals */
+    z-index: 1;
+}
+
+#pgFt {
+    width: 100%;
+    padding: 3px 0px;
+    background: #848484;
+    color: white;
+    position:absolute;
+    bottom: 0;
+}
+
+#pgFt a {
+    color: white;
+}
+
+#legal {
+    float: right;
+}
+
+/***  MENU BAR  ***/
+
+#menubar-vm {
+height: 48px;
+top: -5px;
+position: absolute;
+width: 100%;
+}
+
+.menubar {
+    position: relative;
+    height: 48px;
+    width: 975px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+#site-nav {
+/*    position: absolute; */
+    left: 0;
+}
+
+#user-nav {
+    position: absolute;
+    right: 0;
+}
+
+.menubar * {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/***  MENU BAR STYLINGS  ***/
+
+.bc-ui {
+    background: url("http://localhost:8000/img/_sprite-bc-ui-20150529.png");
+}
+
+.menubar a {
+    color: #408294;
+    cursor: pointer;
+}
+
+.menubar a:hover {
+    text-decoration: none;
+}
+
+.menubar ul.horizontal {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    white-space: nowrap;
+}
+
+.menubar > ul > li {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+/***  BAR ITEMS  ***/
+
+.menubar > ul > li > :first-child {
+    display: block;
+    height: 43px;
+    line-height: 43px;
+    padding: 0 11px;
+    border-top: solid 5px #848484;
+    transition: background 0.1s ease-out;
+    -webkit-transition: background 0.1s ease-out;
+    -moz-transition: background 0.1s ease-out;
+}
+
+.menubar .menucaret {
+    display: inline-block;
+    width: 9px;
+    height: 6px;
+    overflow: hidden;
+    margin: 20px 0 0 7px;
+    background-position: 0 -1px;
+    float: left;
+}
+
+.menubar > ul > li .logo {
+    background-position: 0 -100px;
+    width: 32px;
+    height: 11px;
+    margin-top: 16px;
+}
+
+/***  FAN (USER) BAR ITEM  ***/
+
+.menubar .gear.bc-ui {
+    background-position: -18px -181px;
+    width: 16px;
+    height: 16px;
+    margin: 13px 0 0;
+    float: left;
+}
+
+/*** SEARCH BAR ITEM  ***/
+
+.menubar .search {
+    float: left;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.menubar input#search-field {
+    margin: 0;
+    height: 21px;
+    line-height: 21px;
+    width: 200px;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    color: #333;
+    font-size: 13px;
+    padding: 0 25px 0 3px;
+
+    -webkit-user-select: text;
+}
+
+.menubar #search button {
+    margin: 0;
+    padding: 0;
+    height: 28px;
+    line-height: 22px;
+    border: 6px solid transparent;
+    font-size: 10px;
+    width: 28px;
+    overflow: hidden;
+    position: relative;
+    left: -31px;
+    top: 2px;
+    background-color: transparent;
+}
+
+.menubar #search button:hover,
+.menubar #search button:active {
+    text-decoration: none;
+}
+
+.menubar #search button .bc-ui.menubar-search-icon {
+    background-position: 0 -200px;
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    text-indent: -999rem;
+}
+
+
+/* when signed in as a band on band pages, //bc anchors to the left of the window if there's space */
+
+.menubar {
+    position: static;
+    text-align: right;
+}
+
+ul#user-nav {
+    display: inline-block;
+    position: static;
+    right: auto;
+}
+ul#site-nav > li,
+ul#user-nav > li {
+    text-align: left;
+}
+
+@media all and (min-width: 1075px) {.menubar-item.bclogo {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .out .menubar-item.bclogo {
+        position: static;
+    }}
+
+@media all and (max-width: 1075px) {.menubar-item.bclogo {
+        display: none;
+    }
+    .out .menubar-item.bclogo {
+        display: block;
+    }}
+
+
+/* ------------- webapp_selector.css --------------- */
+.webapp-selector-ui {
+    margin-left: 15px;
+    margin-right: 5px;
+}

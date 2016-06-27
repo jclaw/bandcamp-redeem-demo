@@ -4,7 +4,7 @@
 }
 
 
-#menubar-wrapper, #user-nav, #user-mobile-nav, #login-link-mobile {
+#menubar-wrapper, #user-nav, ul#user-nav, #user-mobile-nav, #login-link-mobile {
 	display: none;
 }
 
@@ -221,7 +221,6 @@
 
 	#menubar-wrapper {
 		display: inherit;
-		background: #DDDDDD;
 	}
 
 	#menubar-wrapper .menubar-divider {
@@ -246,7 +245,7 @@
 	}
 
 	#pgBd > .content {
-		margin: 20px;
+		color: #818285;
 	}
 
 	#profimg {

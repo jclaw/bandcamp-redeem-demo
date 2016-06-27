@@ -206,14 +206,14 @@ span.lightweightBreak {
     height: 0;
     padding-top: 1.3em; /* height */
     margin-right: 0.3125rem;
-    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background: url("http://localhost:8000/img/mobile-sprites-20150520.svg") no-repeat;
     background-size: 500% auto;
     background-position: 0 44%;
     vertical-align: text-bottom;
 }
 
 .no-svg #share-link-share:before {
-    background-image: url(/img/mobile-sprites-20150520.png);
+    background-image: url("http://localhost:8000/img/mobile-sprites-20150520.png");
 }
 
 
@@ -366,7 +366,7 @@ ul.gallery_viewer li.gallery_item.first.last {
     height: 0;
     padding-top: 0.8em; /* height */
     vertical-align: middle;
-    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background: url("http://localhost:8000/img/mobile-sprites-20150520.svg") no-repeat;
     background-size: 500% auto;
     background-position: 0 16%;
 }
@@ -375,7 +375,7 @@ ul.gallery_viewer li.gallery_item.first.last {
 }
 
 .no-svg .track_list .linked .info-col:after {
-    background-image: url(/img/mobile-sprites-20150520.png);
+    background-image: url("http://localhost:8000/img/mobile-sprites-20150520.png");
 }
 
 .track_list .download-col {
@@ -801,13 +801,13 @@ div.label-band-selector select:focus {
     padding-top: 45%; /* height */
     top: 27.5%;
     left: 27.5%;
-    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background: url("http://localhost:8000/img/mobile-sprites-20150520.svg") no-repeat;
     background-size: 500% auto;
     background-position: 0 0;
 }
 
 .no-svg .inline_player .playbutton .icon {
-    background-image: url(/img/mobile-sprites-20150520.png);
+    background-image: url("http://localhost:8000/img/mobile-sprites-20150520.png");
 }
 
 .inline_player .playbutton.playing .icon {
@@ -815,13 +815,13 @@ div.label-band-selector select:focus {
 }
 
 .inline_player .playbutton.busy .icon {
-    background-image: url(/img/playerbusy.svg);
+    background-image: url("http://localhost:8000/img/playerbusy.svg");
     background-size: 100% auto;
     background-position: 50% 50%;
 }
 
 .no-svg .inline_player .playbutton.busy .icon {
-    background-image: url(/img/playerbusy_transp.gif);
+    background-image: url("http://localhost:8000/img/playerbusy_transp.gif");
 }
 
 .inline_player .progbar {
@@ -947,7 +947,7 @@ div.label-band-selector select:focus {
 .inline_player .nextprev .icon {
     /* sprite h/w ratio: 1/1 */
     position: absolute;
-    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background: url("http://localhost:8000/img/mobile-sprites-20150520.svg") no-repeat;
     width: 40%;
     height: 0;
     padding-top: 40%; /* height */
@@ -958,7 +958,7 @@ div.label-band-selector select:focus {
 }
 
 .no-svg .inline_player .nextprev .icon {
-    background-image: url(/img/mobile-sprites-20150520.png);
+    background-image: url("http://localhost:8000/img/mobile-sprites-20150520.png");
 }
 
 .inline_player .prevbutton .icon {
@@ -1031,12 +1031,12 @@ div.has-video-wrapper {
 }
 
 .invertIconography .inline_player .playbutton.busy .icon {
-    background-image: url(/img/playerbusy_dark.svg);
+    background-image: url("http://localhost:8000/img/playerbusy_dark.svg");
     background-position: 50% 50%;
 }
 
 .no-svg .invertIconography .inline_player .playbutton.busy .icon {
-    background-image: url(/img/playerbusy_mobile_dark.gif);
+    background-image: url("http://localhost:8000/img/playerbusy_mobile_dark.gif");
 }
 
 .invertIconography .inline_player .nextprev .icon {
@@ -1103,13 +1103,13 @@ div.has-video-wrapper {
     width: 0.6875rem;
     height: 0.6875rem;
     margin: 0.1rem 0.1rem 0.1rem 0.1rem;
-    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background: url("http://localhost:8000/img/mobile-sprites-20150520.svg") no-repeat;
     background-size: 500% auto;
     background-position: 0 0;
 }
 
 .no-svg .track_list .play_status {
-    background-image: url(/img/mobile-sprites-20150520.png);
+    background-image: url("http://localhost:8000/img/mobile-sprites-20150520.png");
 }
 
 .track_list .play_status.disabled,
@@ -1172,13 +1172,13 @@ tr.track_row_view, div.track_info {
     height: 0;
     padding-top: 1em; /* height */
     margin-left: 0.5rem;
-    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background: url("http://localhost:8000/img/mobile-sprites-20150520.svg") no-repeat;
     background-size: 500% auto;
     background-position: 0 20%;
 }
 
 .no-svg .added-to-cart:after {
-    background-image: url(/img/mobile-sprites-20150520.png);
+    background-image: url("http://localhost:8000/img/mobile-sprites-20150520.png");
 }
 
 /* dark */
@@ -1226,13 +1226,13 @@ tr.track_row_view, div.track_info {
     height: 0;
     padding-top: 1em; /* height */
     margin-right: 0.3125rem;
-    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background: url("http://localhost:8000/img/mobile-sprites-20150520.svg") no-repeat;
     background-size: 500% auto;
     background-position: 0 20%;
 }
 
 .no-svg .goto-top-button:before {
-    background-image: url(/img/mobile-sprites-20150520.png);
+    background-image: url("http://localhost:8000/img/mobile-sprites-20150520.png");
 }
 
 .invertIconography .goto-top-button:before {
@@ -1321,7 +1321,7 @@ tr.track_row_view, div.track_info {
 }
 
 .buyFullDiscography .art .art-thumb {
-    background-image: url('/img/bg-mobile-light-20120612.gif');
+    background-image: url("http://localhost:8000/img/bg-mobile-light-20120612.gif");
     background-size: 100% 100%;
     display: inline-block;
     height: 0;
@@ -1366,7 +1366,7 @@ tr.track_row_view, div.track_info {
 }
 
 .invertIconography .buyFullDiscography .art .art-thumb {
-    background-image: url('/img/bg-mobile-dark-20120809.gif');
+    background-image: url("http://localhost:8000/img/bg-mobile-dark-20120809.gif");
     outline: 0.1rem solid rgba(255,255,255,0.18);
 }
 
@@ -1619,7 +1619,7 @@ tr.track_row_view, div.track_info {
     width: 1.2em;
     margin-right: 0.2em;
     vertical-align: text-bottom;
-    background: url(/img/loading-dark.gif) no-repeat;
+    background: url("http://localhost:8000/img/loading-dark.gif") no-repeat;
     background-size: cover;
     opacity: 0.5;
 }
@@ -1788,7 +1788,7 @@ tr.track_row_view, div.track_info {
     width: 4rem;
     height: 68px;
     display: inline-block;
-    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background: url("http://localhost:8000/img/mobile-sprites-20150520.svg") no-repeat;
     background-size: 500% auto;
     background-position: 0 80%;
     opacity: 0.1;
@@ -1939,12 +1939,12 @@ tr.track_row_view, div.track_info {
     height: 0;
     padding-top: 10%; /* height */
     margin: 1em auto;
-    background: url(/img/playerbusy.svg) no-repeat 50% 50%;
+    background: url("http://localhost:8000/img/playerbusy.svg") no-repeat 50% 50%;
     background-size: 100% auto;
 }
 
 .no-svg .buy-dlg #download-panel-busy:before {
-    background-image: url(/img/playerbusy_transp.gif);
+    background-image: url("http://localhost:8000/img/playerbusy_transp.gif");
 }
 
 .buy-dlg #download-panel-complete {
@@ -2001,13 +2001,13 @@ tr.track_row_view, div.track_info {
     width: 1.563rem;
     height: 0;
     padding-top: 1.125rem; /* height */
-    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background: url("http://localhost:8000/img/mobile-sprites-20150520.svg") no-repeat;
     background-size: 500% auto;
     background-position: 0 28%;
 }
 
 .no-svg #sidecartHeader .cart-icon {
-    background-image: url(/img/mobile-sprites-20150520.png);
+    background-image: url("http://localhost:8000/img/mobile-sprites-20150520.png");
 }
 
 #sidecartHeader .cart-number {
@@ -2146,7 +2146,7 @@ tr.track_row_view, div.track_info {
     width: 50%;
     height: 0;
     padding-top: 50%; /* height */
-    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background: url("http://localhost:8000/img/mobile-sprites-20150520.svg") no-repeat;
     background-size: 500% auto;
     background-position: 0 23.87%;
     margin-top: -77%;
@@ -2155,7 +2155,7 @@ tr.track_row_view, div.track_info {
 }
 
 .no-svg #sidecartContents .item .delete span {
-    background-image: url(/img/mobile-sprites-20150520.png);
+    background-image: url("http://localhost:8000/img/mobile-sprites-20150520.png");
 }
 
 #sidecartReveal {
@@ -2307,7 +2307,7 @@ tr.track_row_view, div.track_info {
 }
 
 .payment-pref-dlg .paypal {
-    background: transparent url("/img/_sprite-bc-cc-cart@2x.png") repeat scroll -5px -101px;
+    background: transparent url("http://localhost:8000/img/_sprite-bc-cc-cart@2x.png") repeat scroll -5px -101px;
     background-size: 114px 122px;
     width: 71px;
     height: 20px;
@@ -2351,7 +2351,7 @@ tr.track_row_view, div.track_info {
 
 /** low-res icons **/
 .icon-cc {
-    background: url(/img/_sprite-bc-cc-cart.png);
+    background: url("http://localhost:8000/img/_sprite-bc-cc-cart.png");
     width: 32px;
     height: 20px;
     background-position: -9px -11px;
@@ -2382,7 +2382,7 @@ tr.track_row_view, div.track_info {
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     .icon-cc {
-        background-image: url(/img/_sprite-bc-cc-cart@2x.png);
+        background-image: url("http://localhost:8000/img/_sprite-bc-cc-cart@2x.png");
         background-size: 114px 122px;
         width: 32px;
         height: 20px;
@@ -2676,13 +2676,13 @@ tr.track_row_view, div.track_info {
     height: 0;
     padding-top: 1.3em; /* height */
     margin-right: 0.3rem;
-    background: url(/img/mobile-sprites-20150520.svg) no-repeat;
+    background: url("http://localhost:8000/img/mobile-sprites-20150520.svg") no-repeat;
     background-size: 500% auto;
     background-position: 0 48%;
     vertical-align: text-bottom;
 }
 .no-svg .collect-item-icon {
-    background-image: url(/img/mobile-sprites-20150520.png);
+    background-image: url("http://localhost:8000/img/mobile-sprites-20150520.png");
 }
 .invertIconography .collect-item-icon {
     background-position: 25% 48%; /* 25% == dark */
@@ -2945,7 +2945,7 @@ tr.track_row_view, div.track_info {
     span.mobile-player-wait {
         padding: 8px 8px 7px 20px;
         z-index: 5;
-        background-image: url(/img/playerbusy_transp.gif);
+        background-image: url("http://localhost:8000/img/playerbusy_transp.gif");
         position: absolute;
     }
 
@@ -2996,7 +2996,7 @@ tr.track_row_view, div.track_info {
     }
 
     dl.video-list .bc-ui2 {
-        background: url('/img/_sprite-bc-ui2-20130524.png') no-repeat;
+        background: url("http://localhost:8000/img/_sprite-bc-ui2-20130524.png") no-repeat;
         height: 13px;
         height: 10px;
         display: inline-block;

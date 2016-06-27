@@ -1,25 +1,25 @@
 var state;
 
-$('head').ready(function() {
-	var width = $(window).width();
-	if (width <= 740) {
-		state = 'mobile';
-		console.log('mobile');
-		loadCSS('tralbum_mobile_bundle.css');
-		loadCSS('global_phone_bundle.css');
-
-	} else {
-		state = 'desktop';
-		console.log('desktop');
-		loadCSS('tralbum_bundle.css');
-		loadCSS('global_bundle.css');
-	}
-
-	function loadCSS(href) {
-		var cssLink = $("<link rel='stylesheet' type='text/css' href='"+href+"'>");
-		$("head").prepend(cssLink);
-	};
-})
+// $('head').ready(function() {
+// 	var width = $(window).width();
+// 	if (width <= 740) {
+// 		state = 'mobile';
+// 		console.log('mobile');
+// 		loadCSS('tralbum_mobile_bundle.css');
+// 		loadCSS('global_phone_bundle.css');
+//
+// 	} else {
+// 		state = 'desktop';
+// 		console.log('desktop');
+// 		loadCSS('tralbum_bundle.css');
+// 		loadCSS('global_bundle.css');
+// 	}
+//
+// 	function loadCSS(href) {
+// 		var cssLink = $("<link rel='stylesheet' type='text/css' href='"+href+"'>");
+// 		$("head").prepend(cssLink);
+// 	};
+// })
 
 $(document).ready(function() {
 	var responsiveData = [

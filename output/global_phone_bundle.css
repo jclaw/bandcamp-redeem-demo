@@ -1,0 +1,386 @@
+
+
+/* ------------- base_phone.css --------------- */
+/*
+ * Fundamental styles for the phone (narrow screen) layout.
+ * CSS in this file should be very general: applicable to most or all pages.
+ * Avoid pixel units! Use %, em, and rem instead.
+ */
+
+/***** Reset ************************************************/
+
+body, h2, ul, li, button  {
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: none;
+}
+button, input {
+    max-width: 100%;
+    font-size: 1rem;
+}
+button {
+    font-family: sans-serif;
+}
+
+
+/***** General styles ****************************************/
+
+html {
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    font-size: 100%; /* base font size: all other font sizes should be expressed in rems or ems */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("http://localhost:8000/img/bg-mobile-light-20120612.gif") #f0f0f0;
+}
+
+a {
+    color: #0687F5;
+}
+
+.horizontal-list {
+    display: inline;
+}
+
+.horizontal-list > li {
+    display: inline-block;
+    padding: 0 0.5em;
+}
+.horizontal-list > li:first-child {
+    padding-left: 0;
+}
+
+#pgBd > .content {
+    /* Ideally we'd put this on #pgBd, but it makes a marginless customHeaderWrapper more difficult.
+       Specified in rems instead of % so we can align with the left padding in #band-navbar > li a. */
+    margin: 0.625rem;
+}
+
+/* used to visually hide text but keep it available for screen readers */
+.hidden-access {
+    position: absolute;
+    top: -10000px;
+    left: -10000px;
+}
+
+/* dark */
+
+
+/***** Buttons **********************************************/
+
+/* dark */
+{
+    display: block;
+    width: 100%;
+    margin: 0.75rem 0 0;
+    color: #0687F5;
+    line-height: 1.875rem;
+    text-align: center;
+    font-weight: bold;
+    border: solid rgba(0,0,0,0.3) thin;
+    border-radius: 0.3125rem;
+    font-size: 0.9375rem;
+    -webkit-box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.2);
+    box-shadow:         0 0.0625rem 0.125rem 0 rgba(0,0,0,0.2);
+    background: rgb(255,255,255);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(239,239,239,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%); /* Opera 11.10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%); /* W3C */
+}
+
+/***** Custom header **************************************/
+
+#customHeaderWrapper > * {
+    display: none;
+}
+
+div#customHeader {
+    display: block;  /* overrides previous */
+}
+
+#customHeader > * {
+    display: none;  /* hide desktop and other headers */
+}
+
+
+/***** Tab bar ********************************************/
+#customHeaderWrapper {
+    position: relative;
+}
+
+/***** Common Widget Graphics ********************/
+
+.bc-ui {
+    background:url("http://localhost:8000/img/_sprite-bc-ui-20150529.png");
+}
+
+
+/* ------------- footer_phone.css --------------- */
+/*
+   Site-wide phone footer CSS
+*/
+
+/* Transitional: hide the desktop footer and show the phone footer, for pages still using client-side phone
+   detection (and therefore including the HTML for both phone and desktop footers). This can be removed once all
+   pages have moved to server-side phone detection.  - sdg 2013.05.31 */
+.pgft-desktop {
+    display: none !important;
+}
+.pgft-phone {
+    display: block !important;
+}
+
+#propOpenWrapper {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;  /* allows us to pin the footer to the bottom of viewport on short pages; see pgFt below */
+}
+
+#pgFt {
+    position: absolute;
+    bottom: 0;  /* for pages shorter than the viewport, pin footer to the bottom */
+    width: 100%;
+    padding: 1.5em 4% 2em;
+    font-size: 0.8rem;
+    background: #8a9295;
+    color: #f5f5f5;
+   -moz-box-sizing:    border-box;
+   -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+}
+
+#pgBd {
+    margin-bottom: 13rem; /* reserve space for the absolutely-positioned pgFt */
+}
+
+#pgFt a {
+    color: #f5f5f5;
+}
+
+/* necessary to override rules currently used in the corpnew_phone bundle */
+#pgFt li {
+    font-size: 0.8rem;
+    list-style-type: none;
+}
+
+#footer-logo {
+    /* image h/w ratio: 1/6.4 */
+    display: inline-block;
+    width: 0;
+    height: 0;
+    padding-top: 4.69%; /* height */
+    padding-left: 30%;  /* width */
+    background: url("http://localhost:8000/img/logo-white.svg") no-repeat;
+    background-size: 100% auto;
+    background-position: left center;
+}
+
+.pgft-phone {
+    text-align: justify;
+    /* see text-align-last hack below */
+    -moz-text-align-last: justify;
+         text-align-last: justify;
+}
+
+/* Hack: we want text-align-last, but as of May 2013 it's only supported in Firefox and IE. Instead, force
+   text-align to act like text-align-last by adding an invisible, second "line". Thanks to
+   http://kristinlbradley.wordpress.com/2011/09/15/cross-browser-css-justify-last-line-paragraph-text */
+.pgft-phone .navgroup:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.pgft-phone .navgroup {
+    /* The text-align-last hack adds an extra line's worth of whitespace to the bottom of the block in all browsers
+       except IE. Compensate for that here by enforcing the height of the block. */
+    height: 1.6em;
+    line-height: 1.6em;
+    margin-top: 1.8em;
+}
+.pgft-phone .navgroup:first-child {
+    margin-top: 0;
+}
+
+.pgft-phone #footer-logo {
+    position: relative;
+    vertical-align: middle;
+}
+
+.pgft-phone #footer-logo a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.pgft-phone .footer-extras {
+    text-align: center;  /* because this currently contains at most one item */
+}
+
+.pgft-phone .footer-extras.hidden {
+    display: none;
+}
+
+
+/* ------------- menubar_phone.css --------------- */
+/***  PAGE ATTRIBUTES  ***/
+
+#menubar-wrapper {
+    display: none;
+}
+
+.menubar > ul > li.extended,
+.menubar > ul > li.search.extended {
+    display: none!important;
+}
+
+#legal {
+    float: right;
+}
+
+/***  MENU BAR  ***/
+
+.menubar {
+    position: relative;
+    height: 43px;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+#site-nav {
+    position: absolute;
+    left: 0;
+}
+
+#user-nav {
+    position: absolute;
+    right: 0;
+}
+
+.menubar * {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/***  MENU BAR STYLINGS  ***/
+
+.menubar a {
+    color: #408294;
+}
+
+.menubar ul.horizontal {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    white-space: nowrap;
+}
+
+.menubar > ul > li {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+/***  BAR ITEMS  ***/
+
+.menubar > ul > li > :first-child {
+    display: block;
+    height: 43px;
+    line-height: 43px;
+    padding: 0 15px;
+
+    transition: background 0.1s ease-out;
+    -webkit-transition: background 0.1s ease-out;
+    -moz-transition: background 0.1s ease-out;
+}
+
+.menubar > ul > li .menucaret {
+    display: inline-block;
+    width: 9px;
+    height: 6px;
+    overflow: hidden;
+    margin: 20px 0 0 7px;
+    background-position: 0 -1px;
+    float: left;
+}
+
+.menubar > ul > li .logo {
+    background: url("http://localhost:8000/img/bandcamp-logo-bc-color.svg") 30% 50% no-repeat;
+    background-size: 100%;
+    width: 45px;
+    height: 45px;
+}
+
+/*** SEARCH BAR ITEM  ***/
+
+.menubar .search {
+    float: left;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.menubar input#search-field {
+    margin: 0;
+    height: 21px;
+    line-height: 21px;
+    width: 280px;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    color: #333;
+    font-size: 13px;
+    padding: 0 25px 0 3px;
+
+    -webkit-user-select: text;
+}
+
+.menubar #search button {
+    margin: 0;
+    padding: 0;
+    height: 28px;
+    line-height: 22px;
+    border: 6px solid transparent;
+    font-size: 10px;
+    width: 28px;
+    overflow: hidden;
+    position: relative;
+    left: -31px;
+    top: 2px;
+    background-color: transparent;
+}
+
+.menubar #search button:hover,
+.menubar #search button:active {
+    text-decoration: none;
+}
+
+.menubar #search button .bc-ui.menubar-search-icon {
+    background-position: 0 -200px;
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    text-indent: -999rem;
+}
