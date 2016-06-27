@@ -122,7 +122,7 @@ body {
 }
 
 #pgFt {
-    font-size: 100%;
+    font-size: .8125rem;
 }
 
 #footer-logo-wrapper {
@@ -146,28 +146,31 @@ body {
 
 #customHeader > .desktop-header {
     display: block; /* overrides previous */
-    width:975px;
+    /*width:975px;*/
+	max-width: 975px;
     min-height:40px;
     position:relative;
 }
 
 #centerWrapper {
-	position:static;
-	width:975px;
+	/*position: static;*/
+	/*width: 975px;*/
+	max-width:975px;
 	margin:0px auto;
 }
 
 #propOpenWrapper {
 	min-height:100%;
 	background-color:white;
-	position:absolute;
+	/*position:absolute;*/
 }
 .defaultbg #propOpenWrapper {
     box-shadow: 0 0 0 1px rgba(0,0,0,.1);
 }
 
 #pgBd {
-    width: 915px;
+    /*width: 915px;*/
+	max-width: 915px;
     margin-bottom: 1.9em;
     padding: 35px 30px 45px;
     background: white;
@@ -214,7 +217,7 @@ body {
     padding: 3px 0px;
     background: #848484;
     color: white;
-    position:absolute;
+    /*position:absolute;*/
     bottom: 0;
 }
 
@@ -238,7 +241,8 @@ width: 100%;
 .menubar {
     position: relative;
     height: 48px;
-    width: 975px;
+    /*width: 975px;*/
+	max-width: 975px;
     margin: 0 auto;
     cursor: pointer;
     font-size: 13px;
@@ -246,7 +250,7 @@ width: 100%;
 
 #site-nav {
     position: absolute;
-    left: 0;
+    /*left: 0;*/
 }
 
 #user-nav {
