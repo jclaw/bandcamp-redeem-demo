@@ -123,19 +123,29 @@
 				<div class="content">
 					<form id="redeem-form">
 						<div class="row">
-							<h2 class="form-header col-12-12">Please enter your code:</h2>
+							<h2 class="form-header col-12-12">
+								<span id="form-header-short" class="desktop">Please enter your code:</span>
+								<span id="form-header-long" class="mobile">Please enter your code and email:</span>
+							</h2>
 						</div>
 						<div id="code" class="row form-block">
-							<label class="col-4-12" for="code-input">Code</label>
+							<label class="col-4-12" for="code-input">
+								<span class="desktop">Code</span>
+								<span class="mobile">code:</span>
+							</label>
 							<div class="col-4-12 offset-4-12 form-field">
 								<input id="code-input" class="textinput" type="text" tabindex="1" name="code" value="" autocomplete="off" autocapitalize="none" placeholder="e.g. lanz-gh9h" required>
 								<div class="bc-ui form-icon"></div>
 							</div>
 						</div>
 						<div id="email" class="row form-block">
-							<label class="col-4-12" for="email-input">Email <span class="de-emphasized">(optional)</span></label>
+							<label class="col-4-12" for="email-input">
+								<span class="desktop">Email <span class="de-emphasized">(optional)</span></span>
+								<span class="mobile">email:</span>
+							</label>
 							<div class="col-4-12 offset-4-12 form-field">
-								<input id="email-input" class="textinput" type="email" tabindex="2" name="email" value="" autocomplete="off" autocapitalize="none" placeholder="join the artist's mailing list">
+								<span class="desktop"><input class="email-input textinput" type="email" tabindex="2" name="email" value="" autocomplete="off" autocapitalize="none" placeholder="join the artist's mailing list"></span>
+								<span class="mobile"><input class="email-input textinput" type="email" tabindex="2" name="email" value="" autocomplete="off" autocapitalize="none" placeholder="download link will be sent here"></span>
 							</div>
 						</div>
 						<div class="row">
@@ -146,17 +156,17 @@
 									</label>
 								</div>
 
-								<div id="login-link-mobile" class="small-message">Already have an account? <a href="">Log in.</a></div>
+								<div id="login-link-mobile" class="small-message mobile">Already have an account? <a href="">Log in.</a></div>
 
 								<div id="buttons">
 									<button class="redeem-button" type="submit" name="redeem" value="Redeem">
-										<div id="redeem-button-text-1">Redeem</div>
-										<div id="redeem-button-text-2">Next</div>
+										<div class="desktop redeem-button-redeem">Redeem</div>
+										<div class="mobile redeem-button-next">Next</div>
 									</button>
 								</div>
 
 								<div id="forlesswhitespace"></div>
-								<div id="login-link-desktop" class="small-message">
+								<div id="login-link-desktop" class="small-message desktop">
 									Already have an account? <a href="">Log in.</a>
 								</div>
 							</div>

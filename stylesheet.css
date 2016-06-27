@@ -1,10 +1,9 @@
-.content {
-	font-size: 110%;
-	margin-top: 20px;
+.hidden {
+	display: none;
 }
 
 
-#menubar-wrapper, #user-nav, ul#user-nav, #user-mobile-nav, #login-link-mobile {
+#menubar-wrapper, #user-nav, ul#user-nav, #user-mobile-nav {
 	display: none;
 }
 
@@ -17,7 +16,9 @@
 	color: #818285;
 }
 
-
+.mobile {
+	display: none;
+}
 
 .bc-ui.loading {
 	background: url('img/loading_icon.gif');
@@ -145,10 +146,6 @@
 	text-decoration: none;
 }
 
-#redeem-button-text-2 {
-	display: none;
-}
-
 .notable {
 	color: red;
 }
@@ -204,6 +201,15 @@
 
 
 @media (max-width: 740px) {
+
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		display: initial;
+	}
+
 	body {
 		background: url('img/bg-mobile-light-20120612.gif') #f0f0f0;
 	}
@@ -321,10 +327,6 @@
 		margin-top: 28px;
 	}
 
-	#login-link-desktop {
-		display: none;
-	}
-
 	.buttons {
 		margin-top: 28px;
 	}
@@ -333,14 +335,6 @@
 		border-radius: 4px;
 		font-size: 16px;
 		padding: 12px;
-	}
-
-	#redeem-button-text-1 {
-		display: none;
-	}
-
-	#redeem-button-text-2 {
-		display: initial;
 	}
 
 	.loggedin #user-mobile-nav {
@@ -355,15 +349,27 @@
 		padding: 30px 0;
 	}
 
+	.loggedin #form-header-short {
+		display: initial;
+	}
+
+	.loggedin #form-header-long {
+		display: none;
+	}
+
 	.loggedin .collection-add {
 		display: none;
 	}
 
-	.loggedin #redeem-button-text-1 {
+	.loggedin .form-block .form-field {
+		padding-left: 0;
+	}
+
+	.loggedin .redeem-button-redeem {
 		display: initial;
 	}
 
-	.loggedin #redeem-button-text-2 {
+	.loggedin .redeem-button-next {
 		display: none;
 	}
 }
