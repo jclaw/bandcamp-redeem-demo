@@ -431,7 +431,7 @@ ul#user-nav > li {
 /************* tralbum_mobile_bundle.css *************/
 /*****************************************************/
 
-@media (max-width: 740px) {
+@media (max-width: 975px) {
 	/* ------------- base_phone.css --------------- */
 	/*
 	 * Fundamental styles for the phone (narrow screen) layout.
@@ -585,9 +585,12 @@ ul#user-nav > li {
 	}
 
 	#propOpenWrapper {
-	    position: absolute;
+	    /*position: absolute;*/
 	    width: 100%;
 	    min-height: 100%;  /* allows us to pin the footer to the bottom of viewport on short pages; see pgFt below */
+		margin-top: -43px;
+		padding-top: 43px;
+		box-sizing: border-box;
 	}
 
 	.defaultbg #propOpenWrapper {
@@ -612,6 +615,7 @@ ul#user-nav > li {
 		width: auto;
 		position: initial;
 		padding: 0;
+		max-width: initial;
 	}
 
 	#pgFt a {
@@ -629,12 +633,13 @@ ul#user-nav > li {
 	    display: inline-block;
 	    width: 0;
 	    height: 0;
-	    padding-top: 4.69%; /* height */
-	    padding-left: 30%;  /* width */
+	    padding-top: 11px; /* height */
+	    padding-left: 80px;  /* width */
 	    background: url("http://localhost:8000/img/logo-white.svg") no-repeat;
 	    background-size: 100% auto;
 	    background-position: left center;
 		float: none;
+		margin: 0;
 	}
 
 	.pgft-phone {

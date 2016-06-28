@@ -7,11 +7,7 @@ $(document).ready(function() {
 		return false;
 	})
 
-	$('.bc-ui.gear').click(function() {
-		logout();
-	})
-
-	$('#account-main a').click(function() {
+	$('.bc-ui.gear, #account-main a').click(function() {
 		logout();
 		return false;
 	})

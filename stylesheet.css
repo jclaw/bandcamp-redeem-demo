@@ -201,7 +201,7 @@
 
 
 
-@media (max-width: 740px) {
+@media (max-width: 975px) {
 
 	.desktop {
 		display: none;
@@ -253,6 +253,8 @@
 
 	#pgBd > .content {
 		color: #818285;
+		width: 50%;
+		margin: 0 auto;
 	}
 
 	#profimg {
@@ -389,11 +391,18 @@
 	}
 }
 
-@media (min-width: 741px) {
+@media (min-width: 976px) {
 	.pgft-desktop {
 		display: inherit;
 	}
 	.pgft-phone {
 		display: none;
+	}
+}
+
+@media (max-width: 740px) {
+	#pgBd > .content {
+		width: auto;
+		margin: 1.25rem;
 	}
 }
