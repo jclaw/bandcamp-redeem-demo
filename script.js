@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 	$('#code-input').on('input', function() {
 		var input = $(this);
-		var icon = input.parent().find('.bc-ui.form-icon');
+		var icon = $('#code-icon');
 		if (input.val().length == 9 && input.val()[4] == '-') {
 			icon.addClass('loading');
 
@@ -24,13 +24,13 @@ $(document).ready(function() {
 			}, 500);
 		} else {
 			clearTimeout(iconTimer);
-			icon.removeClass('loading times check');
+			clearIcon();
 		}
 	})
 
 	$('#code-input').focusout(function() {
 		var input = $(this);
-		var icon = input.parent().find('.bc-ui.form-icon');
+		var icon = $('#code-icon');
 		if (!icon.hasClass('loading') && !icon.hasClass('check')) {
 			icon.addClass('times');
 		}
@@ -62,13 +62,18 @@ $(document).ready(function() {
 
 	function login() {
 		$('body').addClass('loggedin');
+		clearIcon();
 		console.log('logged in');
 	}
 
 	function logout() {
 		$('body').removeClass('loggedin');
+		clearIcon();
 		console.log('logged out');
 	}
 
+	function clearIcon() {
+		$('#code-icon').removeClass('loading times check');
+	}
 
 })
