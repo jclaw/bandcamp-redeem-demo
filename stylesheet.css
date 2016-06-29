@@ -2,6 +2,10 @@
 	display: none;
 }
 
+.bc-ui {
+	background: url('img/_sprite-bc-ui-20150629.png');
+}
+
 
 #menubar-wrapper, #user-nav, ul#user-nav, #user-mobile-nav {
 	display: none;
@@ -21,30 +25,35 @@
 }
 
 .bc-ui.times {
-	background: url('img/times.svg');
-	height: 1.34em;
-	width: 1.34em;
-	top: .5em;
+	background-position: -24px -80px;
+	height: 12px;
+	width: 12px;
+	top: .75em;
 }
 
 .bc-ui.loading {
 	background: url('img/loading_icon.gif');
-	height: 1.61em;
-	width: 1.61em;
-	top: .3em;
+	background-size: contain;
+	height: 15px;
+	width: 15px;
+	top: .6em;
 }
 
 .bc-ui.check {
-	background: url('img/check.svg');
-	height: 1.61em;
-	width: 1.61em;
-	top: .5em;
+	background-position: 0px -6px;
+	height: 12px;
+	width: 15px;
+	top: .75em;
+
+	/*background-position: 0px -508px;
+	height: 21px;
+	width: 19px;
+	top: .45em;*/
 }
 
 
 
 .bc-ui.form-icon {
-	background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
     right: .54em;
@@ -313,18 +322,20 @@
 	}
 
 	.bc-ui.times {
-		top: .7em;
+		top: 1em;
 	}
 
 	.bc-ui.loading {
-		top: .6em;
+		top: .9em;
 	}
 
 	.bc-ui.check {
-		top: .8em;
+		top: 1em;
 	}
 
-
+	.bc-ui.form-icon {
+	    right: .8em;
+	}
 
 
 	.loggedin #user-mobile-nav {
