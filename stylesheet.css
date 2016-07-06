@@ -131,14 +131,6 @@
 	text-decoration: none;
 }
 
-.notable {
-	color: red;
-}
-
-#warning {
-	display: none;
-}
-
 .small-message {
 	margin-top: 4.125rem;
 	text-align: center;
