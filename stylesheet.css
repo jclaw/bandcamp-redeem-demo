@@ -309,12 +309,6 @@
 		font-size: 0.875rem;
 	}
 
-	#login-link-mobile {
-		display: inherit;
-		margin-left: 0px;
-		margin-top: 1.625rem;
-	}
-
 	.redeem-button {
 		border-radius: 0.25rem;
 		font-size: 1rem;

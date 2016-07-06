@@ -2,7 +2,13 @@ $(document).ready(function() {
 
 	var iconTimer;
 
-	$('.small-message a, #login-main a').click(function() {
+	$('.small-message a').click(function() {
+		var formdata = getCodeAndEmail();
+		login();
+		return false;
+	})
+
+	$('#login-main a').click(function() {
 		login();
 		return false;
 	})
@@ -46,16 +52,9 @@ $(document).ready(function() {
 
 	$('#redeem-form').submit(function(e) {
 		e.preventDefault();
-		var form = $(this);
-		var code = form.find('#code-input').val();
-		var emailfields = form.find('.email-input');
-		var email;
-		if ($(emailfields[0]).val() == '') {
-			email = $(emailfields[1]).val();
-		} else {
-			email = $(emailfields[0]).val();
-		}
-		console.log(code, email);
+		var formdata = getCodeAndEmail();
+
+		console.log(formdata.code, formdata.email);
 	})
 
 
@@ -74,6 +73,20 @@ $(document).ready(function() {
 
 	function clearIcon() {
 		$('#code-icon').removeClass('loading times check');
+	}
+
+	function getCodeAndEmail() {
+		var obj = {};
+		var form = $('#redeem-form');
+		obj.code = form.find('#code-input').val();
+
+		// both email fields are identical
+		obj.email = $(form.find('.email-input')[0]).val();
+
+		obj.code = obj.code == '' ? undefined : obj.code;
+		obj.email = obj.email == '' ? undefined : obj.email;
+
+		return obj;
 	}
 
 })
