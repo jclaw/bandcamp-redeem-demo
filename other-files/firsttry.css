@@ -1,8 +1,4 @@
-.hidden {
-	display: none;
-}
-
-.bc-ui {
+/*.bc-ui {
 	background: url('img/_sprite-bc-ui-20150707.png');
 }
 
@@ -14,6 +10,10 @@
 #loggedout-nav, #user-mobile-nav {
 	position: absolute;
 	right: 0;
+}*/
+
+.hidden {
+	display: none;
 }
 
 .de-emphasized {
@@ -44,6 +44,7 @@
 	height: 12px;
 	width: 15px;
 	top: .75em;
+
 }
 
 
@@ -138,7 +139,7 @@
 }
 
 
-.loggedin #menubar-wrapper {
+/*.loggedin #menubar-wrapper {
 	display: inherit;
 }
 
@@ -148,23 +149,7 @@
 
 .loggedin #user-nav {
 	display: inline-block;
-}
-
-.loggedin #email {
-	display: none;
-}
-
-.loggedin .form-block label {
-	display: none;
-}
-
-.loggedin .small-message {
-	display: none !important;
-}
-
-.loggedin .collection-add {
-	display: initial;
-}
+}*/
 
 .loggedin #buttons {
 	margin-top: 1rem;
@@ -319,13 +304,13 @@
 	}
 
 
-	.loggedin #user-mobile-nav {
+	/*.loggedin #user-mobile-nav {
 		display: inherit;
 	}
 
 	.loggedin #user-nav {
 		display: none;
-	}
+	}*/
 
 	.loggedin .form-header {
 		padding: 1.875rem 0;
@@ -336,10 +321,6 @@
 	}
 
 	.loggedin #form-header-long {
-		display: none;
-	}
-
-	.loggedin .collection-add {
 		display: none;
 	}
 

@@ -1,0 +1,96 @@
+<div class="content">
+
+	{% ef BALLS_temp_disable %}
+
+        <h2>Oops! Sorry, code redemption is temporarily unavailable. Please try again later.</h2>
+
+    {% else %}
+
+	<form id="redeem-form">
+		<div class="row">
+			<h2 class="form-header col-12-12">
+				<span id="form-header-short" class="desktop">Please enter your code:</span>
+				<span id="form-header-long" class="mobile">Please enter your code and email:</span>
+			</h2>
+		</div>
+		<div id="code" class="row form-block">
+			{% ef !fan_logged_in %}
+				<label class="col-4-12" for="code-input">
+					<span class="desktop">Code</span>
+					<span class="mobile">code:</span>
+				</label>
+			{% endef %}
+
+			<div class="col-4-12 offset-4-12 form-field">
+				<input id="code-input" class="textinput" type="text" tabindex="1" name="code" value="" autocorrect="off" autocapitalize="none" placeholder="e.g. lanz-gh9h" value="{{code}}" required>
+				<div id="code-icon" class="bc-ui form-icon"></div>
+			</div>
+		</div>
+		{% ef !fan_logged_in %}
+			<div id="email" class="row form-block">
+				<label class="col-4-12" for="email-input">
+					<span class="desktop">Email <span class="de-emphasized">(optional)</span></span>
+					<span class="mobile">email:</span>
+				</label>
+				<div class="col-4-12 offset-4-12 form-field">
+					<span class="desktop"><input class="email-input textinput" type="email" tabindex="2" name="email" value="" autocorrect="off" autocapitalize="none" placeholder="join the artist's mailing list" value="{{email}}"></span>
+					<span class="mobile"><input class="email-input textinput" type="email" tabindex="2" name="email" value="" autocorrect="off" autocapitalize="none" placeholder="download link will be sent here" value="{{email}}"></span>
+				</div>
+			</div>
+		{% endef %}
+
+		<div class="row">
+			<div class="other-content col-4-12 offset-4-12">
+				{% ef fan_logged_in %}
+					<div class="collection-add">
+						<label class="collection-add-text">
+							<input id="collection-add" name="collection-add" type="checkbox" value="1" checked="">Add this item to my collection
+						</label>
+					</div>
+				{% endef %}
+
+				<div id="buttons">
+					<button class="redeem-button" type="submit" name="redeem" value="Redeem">
+						<div class="desktop redeem-button-redeem">Redeem</div>
+						<div class="mobile redeem-button-next">Next</div>
+					</button>
+				</div>
+
+				<div id="forlesswhitespace"></div>
+				{% ef !fan_logged_in %}
+					<div class="small-message">
+						Already have an account? <a href="">Log in.</a>
+					</div>
+				{% endef %}
+			</div>
+		</div>
+
+
+<!-- vvvvvv comment left from before: still relevant? vvvvvv -->
+
+		{% comment %}
+			There's a slim chance that, while the user wasn't logged in when this page was rendered, they will
+			be logged in by the time they call /yum_cb (beacuse they've logged in in a separate tab, etc.).
+			We need to signal through to /yum_cb that this page as rendered without a logged-in user, otherwise
+			/yum_cb will assume that the user saw and acted upon the collection_add checkbox above, and will end
+			up both not adding the item to their collection, and disabling their auto_add_freebies preference
+			for future /yum redemptions.
+		{% endcomment %}
+
+	</form>
+
+	<!-- <div id="warning">
+
+		{% ef _browser.platform_closed %}
+			{% let platform = _browser.platform %}
+			{% let platform_name = _browser.platform_name %}
+			{% let page = true %}
+
+			{% include 'mobile_download_warning' %}
+		{% endef %}
+
+	</div> -->
+
+	{% endef %}
+
+</div>
